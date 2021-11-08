@@ -12,7 +12,7 @@ public class PagerController {
             case "metro_query/index":
         //        controller.navigate(R.id.metro_fragment,new Bundle());
                 break;
-            case "demo/index":
+            case "ss/index":
                 controller.navigate(R.id.wearther_fragment,new Bundle());
                 break;
             case "park/index":

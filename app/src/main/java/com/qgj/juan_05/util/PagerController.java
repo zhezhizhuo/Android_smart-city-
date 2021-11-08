@@ -9,7 +9,7 @@ import com.qgj.juan_05.R;
 public class PagerController {
     public static void PagerController(NavController controller,String index){
         switch (index){
-            case "metro_query/index":
+            case "ss/index":
         //        controller.navigate(R.id.metro_fragment,new Bundle());
                 break;
             case "living_expenses/index":

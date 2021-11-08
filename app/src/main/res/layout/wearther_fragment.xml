@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.Wearther_fragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:text="天气预报" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/img_wearth"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_marginTop="40dp"
+               android:textSize="18dp"
+               android:padding="10dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:text="天气: 晴"
+               android:textColor="#FFF" />
+           <TextView
+               android:id="@+id/today"
+               android:layout_marginLeft="30dp"
+               android:text="今天"
+               android:textSize="30dp"
+               android:textColor="#FFF"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <LinearLayout
+               android:paddingTop="10dp"
+               android:paddingLeft="20dp"
+               android:orientation="horizontal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:text="空气质量:"
+                   android:textColor="#FFF"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:id="@+id/air"
+                   android:paddingLeft="20dp"
+                   android:layout_width="wrap_content"
+                   android:text="无污染"
+                   android:textColor="#FFF"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+           <LinearLayout
+               android:paddingLeft="25dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:paddingTop="10dp"
+                   android:id="@+id/Temperature"
+                   android:text="20℃ /  10℃"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+       </LinearLayout>
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/windleav"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:textColor="#787272"
+                android:text="二级"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/wind"
+                android:textSize="20dp"
+                android:textColor="#787272"
+                android:text="西风"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/uptime"
+                android:layout_marginTop="80dp"
+                android:layout_width="wrap_content"
+                android:textColor="#787272"
+                android:text="更新时间:  19:00"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@drawable/wear_bg"
+
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</FrameLayout>

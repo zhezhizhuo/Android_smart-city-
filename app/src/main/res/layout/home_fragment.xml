@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:layout_marginLeft="25dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/search_bg_color"
+                    android:layout_width="285dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:paddingLeft="20dp"
+                        android:layout_width="30dp"
+                        android:background="@drawable/search"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/search"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:background="@color/transparent"
+                        android:layout_width="300dp"
+                        android:hint="请输入搜索关键字"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <ImageButton
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/search_button"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        <com.qgj.juan_05.ui.view.BannerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/newsheader"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@android:color/holo_blue_light"
+            android:background="@drawable/home_news_bg"
+            app:tabMode="scrollable"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/transparent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newsinfo"
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

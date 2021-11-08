@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.HospitalFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:background="@drawable/banner_bg"
+            android:id="@+id/baoming"
+            android:text="报名参加"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+</FrameLayout>

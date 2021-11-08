@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.fragment.user.UpuserInfoFragment">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:text="修改个人信息"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:gravity="center"
+        android:paddingRight="30dp"
+        android:layout_marginBottom="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text="手机:"
+                android:textColor="#CDDC39"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/iphone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="15211811655"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text="邮箱:"
+                android:textColor="#CDDC39"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/emial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="231231231231231"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text="性别:"
+                android:textColor="#CDDC39"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="男"
+                    android:textSize="20dp" >
+
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="女"
+                    android:textSize="20dp" >
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text="昵称:"
+                android:textColor="#CDDC39"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/nick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="200"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:paddingLeft="20dp"
+                android:text="身份证:"
+                android:textColor="#CDDC39"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="900"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/send"
+        android:padding="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/user_bg_center"
+        android:layout_width="200dp"
+        android:text="提交"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 填充颜色 -->
+    <solid android:color="#FFFFFF"></solid>
+
+    <!-- 线的宽度，颜色灰色 -->
+    <stroke android:width="1dp" android:color="#D5D5D5"></stroke>
+
+
+    <gradient android:startColor="#cd5c5c"  android:centerColor="#f08080" android:type="linear" android:centerY="2" android:centerX="1"/>
+</shape>

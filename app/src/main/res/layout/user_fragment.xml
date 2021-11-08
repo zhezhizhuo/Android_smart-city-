@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.UserFragment">
+
+
+    <LinearLayout
+        android:id="@+id/logins"
+        android:background="@drawable/user__color_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="个人中心"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_marginLeft="5dp"
+                android:id="@+id/touxiang"
+                android:src="@drawable/user_ico_phote"
+                android:layout_width="200dp"
+                android:layout_height="100dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <TextView
+                android:id="@+id/username"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:text="暂时未登录"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/user__color_bg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="205dp"
+            android:layout_height="50dp"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/user_bg_center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:paddingBottom="100dp"
+                android:text="200 积分"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="未登录"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/login_show"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/xg"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ico"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="修改密码"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upinfo"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ico_update"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="修改信息"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/info"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ico_info1"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="个人信息"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dingdan"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ico_info"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="订单列表"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yj"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ico_yj"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="意见反馈"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/outlgoin"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/user_ioc_extis"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingLeft="15dp"
+                android:text="退出登录"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="170dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_width="25dp"
+                android:layout_height="50dp">
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

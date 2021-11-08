@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.HospitalFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.qgj.juan_05.ui.view.BannerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:background="@drawable/banner_bg"
+            android:id="@+id/subscribe"
+            android:text="预约挂号"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+</FrameLayout>

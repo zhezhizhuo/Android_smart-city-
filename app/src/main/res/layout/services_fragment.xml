@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.ServicesFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp">
+            <LinearLayout
+                android:layout_marginLeft="25dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/search_bg_color"
+                android:layout_width="285dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:paddingLeft="20dp"
+                    android:layout_width="30dp"
+                    android:background="@drawable/search"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/search"
+                    android:lines="1"
+                    android:paddingLeft="10dp"
+                    android:background="@color/transparent"
+                    android:layout_width="300dp"
+                    android:hint="请输入搜索关键字"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <ImageButton
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/search_button"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/bmfw"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/service_type_bianming"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:id="@+id/bmtext"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:paddingLeft="55dp"
+                    android:textColor="@color/black"
+                    android:text="便民服务"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/user_ico_back"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp">
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:id="@+id/czfw"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/service_type_car"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:id="@+id/cztext"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:paddingLeft="55dp"
+                    android:textColor="@color/black"
+                    android:text="车主服务"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/user_ico_back"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp">
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+
+                android:id="@+id/shfw"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/service_type_life"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/chtext"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:paddingLeft="55dp"
+                    android:textColor="@color/black"
+                    android:text="生活服务"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/user_ico_back"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:id="@+id/more"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/service_type_more"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:paddingLeft="55dp"
+                    android:id="@+id/moretext"
+                    android:textColor="@color/black"
+                    android:text="更多服务"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/user_ico_back"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

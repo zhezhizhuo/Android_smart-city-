@@ -99,4 +99,9 @@
         android:id="@+id/activityInfoFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.ActivityInfoFragment"
         android:label="报名活动" />
+    <activity
+        android:id="@+id/guildFragment"
+        android:name="com.qgj.juan_05.ui.fragment.guilde.GuildFragment"
+        android:label="fragment_guild"
+        tools:layout="@layout/fragment_guild" />
 </navigation>

@@ -2,7 +2,7 @@
 <LinearLayout android:layout_width="wrap_content"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
-    android:background="@drawable/bus_boder"
+
     android:padding="10dp"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android" >
@@ -137,20 +137,31 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:text="终点站"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <ListView
-        android:id="@+id/liest"
+    <LinearLayout
+        android:id="@+id/list_item"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-    <TextView
-        android:text="结束站"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="终点站"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ListView
+            android:id="@+id/liest"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:text="结束站"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="1dp"/>
 </LinearLayout>

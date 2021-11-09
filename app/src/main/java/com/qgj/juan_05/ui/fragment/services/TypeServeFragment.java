@@ -52,7 +52,8 @@ public class TypeServeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         List<HomeServiceModel.RowsDTO> newss = new ArrayList<>();
         mViewModel = new ViewModelProvider(this).get(TypeServeViewModel.class);
-        RecyclerView.LayoutManager man = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
+        //服务列表
+        RecyclerView.LayoutManager man = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
         inflate.typeservice.setLayoutManager(man);
 
         mViewModel.getMserviceall().observe(getViewLifecycleOwner(), new Observer<HomeServiceModel>() {

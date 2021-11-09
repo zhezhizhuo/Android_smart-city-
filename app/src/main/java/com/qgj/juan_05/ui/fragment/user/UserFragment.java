@@ -138,7 +138,7 @@ public class UserFragment extends Fragment {
         mBinding.logins.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    if (MainActivity.token==null&&MainActivity.token.equals("")){
+                    if (MainActivity.token==null||MainActivity.token.equals("")){
                                 return;
                     }
                 getActivity().runOnUiThread(new Runnable() {

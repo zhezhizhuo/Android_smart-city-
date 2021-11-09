@@ -5,31 +5,24 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="ui.activity.MainActivity">
-        <ImageView
-            android:id="@+id/initimg"
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_alignParentTop="true"
+            android:id="@+id/a_main_nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_alignParentTop="true"
-        android:id="@+id/a_main_nav_host"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/a_main_bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_alignBottom="@id/a_main_nav_host"
-        android:background="?android:attr/windowBackground"
-        android:rotation="0"
-        android:stateListAnimator="@anim/slide_from_left"
-        app:itemIconTint="@drawable/ic_selector_nav_colors"
-        app:itemTextColor="@drawable/ic_selector_nav_colors"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_meun" />
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/a_main_bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            android:rotation="0"
+            android:stateListAnimator="@anim/slide_from_left"
+            app:itemIconTint="@drawable/ic_selector_nav_colors"
+            app:itemTextColor="@drawable/ic_selector_nav_colors"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_meun" />
 </RelativeLayout>

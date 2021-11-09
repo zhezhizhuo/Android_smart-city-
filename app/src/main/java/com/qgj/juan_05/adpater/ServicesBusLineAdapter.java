@@ -1,16 +1,20 @@
  package com.qgj.juan_05.adpater;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.PointerIcon;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ItemBuslineBinding;
 import com.qgj.juan_05.databinding.ItemWearthercenterBinding;
 import com.qgj.juan_05.netwok.model.BusLienModel;
@@ -58,39 +62,30 @@ public class ServicesBusLineAdapter extends RecyclerView.Adapter<ServicesBusLine
         holder.binding.mileage.setText(rowsDTO.getMileage()+"");
         holder.binding.prices.setText("  $"+rowsDTO.getPrice());
         //获取根据id所有的路径
-
-            holder.binding.liest.setAdapter(adapter);
+        String[] strs = new String[]{ "12","12","12"};
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1,strs);
+      //      holder.binding.liest.setAdapter(arrayAdapter);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
+                boolean flag;
                 @Override
                 public void onClick(View v) {
-                    setData();
+                    Log.e("TGA",rowsDTO.getId()+"");
+                    LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) binding.listItem.getLayoutParams();
+                    if(flag){
+                       layoutParams.height=0;
+                       flag=false;
+                   }else {
+                       layoutParams.height=200;
+                       flag=true;
+                   }
+                    binding.liest.setLayoutParams(layoutParams);
                 }
             });
     }
 
-    private void setData() {
-       if (adapter==null){
-           new Thread(()->{
-               try {
-                   BusLineInfoModel busLienInfoById = ServiceDaoImpl.getBusLienInfoById(mInt);
-                   List<String> list = new ArrayList<>();
-                   for (BusLineInfoModel.RowsDTO row : busLienInfoById.getRows()) {
-                       list.add(row.getName());
-                   }
-                   Object[] objects = list.toArray();
-                   String []  strs = new String[objects.length];
-                   for (int i = 0; i < objects.length; i++) {
-                       strs[i] = (String) objects[i];
-                   }
-                   adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_dropdown_item_1line,strs);
-               } catch (IOException ioException) {
-                   ioException.printStackTrace();
+    private void setData(int position) {
 
-               }
-           }).start();
-       }
-        binding.liest.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+
     }
 
     @Override
@@ -98,7 +93,7 @@ public class ServicesBusLineAdapter extends RecyclerView.Adapter<ServicesBusLine
         return  mList==null? 0:mList.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+     class ViewHolder extends RecyclerView.ViewHolder{
         ItemBuslineBinding binding;
         public ViewHolder(@NonNull @NotNull ItemBuslineBinding binding) {
             super(binding.getRoot());

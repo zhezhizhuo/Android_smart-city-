@@ -6,10 +6,12 @@ import com.qgj.juan_05.netwok.model.ActivityBannerModel;
 import com.qgj.juan_05.netwok.model.ActivityInfoModel;
 import com.qgj.juan_05.netwok.model.ActivityTypeModel;
 import com.qgj.juan_05.netwok.model.ActivyInfoModel;
+import com.qgj.juan_05.netwok.model.AddCardModel;
 import com.qgj.juan_05.netwok.model.BaoMing;
 import com.qgj.juan_05.netwok.model.BaoMingModel;
 import com.qgj.juan_05.netwok.model.BusLienModel;
 import com.qgj.juan_05.netwok.model.BusLineInfoModel;
+import com.qgj.juan_05.netwok.model.CardInfoModel;
 import com.qgj.juan_05.netwok.model.DataModel;
 import com.qgj.juan_05.netwok.model.FeedBackModel;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
@@ -36,7 +38,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public  class ServiceDaoImpl {
 
     private static   ServiceDao mServiceDao;
-
     static {//静态代码块加载数据Dao
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(MainActivity.serverURL)
@@ -146,6 +147,18 @@ public  class ServiceDaoImpl {
     ////报名这个活动
     public static DataModel baomingActivity(String token, BaoMing bm) throws IOException {
         return Call(mServiceDao.baomingActivity(token,bm));
+    }
+    ////查询用户就诊卡
+    public static CardInfoModel getCardInfo(String token) throws IOException {
+        return Call(mServiceDao.getCardInfo(token));
+    }
+    ////根据类型查询医生
+    public static CardInfoModel getDoctorType(int token) throws IOException {
+        return Call(mServiceDao.getDoctorType(token));
+    }
+    ////报名这个活动
+    public static DataModel addCard(String token, AddCardModel bm) throws IOException {
+        return Call(mServiceDao.addCard(token,bm));
     }
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();

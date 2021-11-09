@@ -101,4 +101,24 @@
         android:name="com.qgj.juan_05.ui.fragment.guilde.GuildFragment"
         android:label="fragment_guild"
         tools:layout="@layout/fragment_guild" />
+    <activity
+        android:id="@+id/guildeActivity"
+        android:name="com.qgj.juan_05.ui.activity.GuildeActivity"
+        android:label="activity_guilde"
+        tools:layout="@layout/activity_guilde" />
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
+    <fragment
+        android:id="@+id/addCardFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.AddCardFragment"
+        android:label="fragment_add_card"
+        tools:layout="@layout/fragment_add_card" />
+    <fragment
+        android:id="@+id/departmentFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.DepartmentFragment"
+        android:label="fragment_department"
+        tools:layout="@layout/fragment_department" />
 </navigation>

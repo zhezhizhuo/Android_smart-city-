@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/card_border"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:text="姓名 : 屈高杰"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/sfz"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:text="身份证 : 43042120020324"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/iphone"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:text="手机号码 : 15211811655"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/blh"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:text="病例号 : 20211109"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

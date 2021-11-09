@@ -9,8 +9,11 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.bumptech.glide.Glide;
+import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.FragmentHospitalBinding;
 import com.qgj.juan_05.netwok.model.OutAbnnerModel;
 import com.qgj.juan_05.netwok.service.ServiceDaoImpl;
@@ -31,12 +34,14 @@ public class HospitalFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
+    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentHospitalBinding.inflate(getLayoutInflater());
+        navController = NavHostFragment.findNavController(this);
         return binding.getRoot();
     }
 
@@ -59,8 +64,11 @@ public class HospitalFragment extends Fragment {
                     Toast.makeText(getActivity(), "请先登录在来预约", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                //说明登录了 就跳转到那个就诊卡区域
+                navController.navigate(R.id.cardFragment);
             }
         });
+
     }
 
     private void initdata() {

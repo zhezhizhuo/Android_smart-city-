@@ -111,5 +111,13 @@ public interface ServiceDao {
     //报名改活动
     @POST("/prod-api/api/activity/signup")
     Call<DataModel>baomingActivity(@Header("Authorization") String Authorization,@Body BaoMing bm);
-
+    //查询就诊卡
+    @GET("/prod-api/api/hospital/patient/list")
+    Call<CardInfoModel> getCardInfo(@Header("Authorization") String Authorization);
+    //查询专家
+    @GET("/prod-api/api/hospital/category/list")
+    Call<CardInfoModel> getDoctorType(@Query("type") int id);
+    //添加就诊卡
+    @POST("/prod-api/api/hospital/patient")
+    Call<DataModel> addCard(@Header("Authorization") String Authorization,@Body AddCardModel addCardModel);
 }

@@ -122,6 +122,7 @@ public class HomeFragment extends Fragment {
                         if(img.getParent() instanceof ViewGroup){
                             ((ViewGroup)img.getParent()).removeView(img);
                         }
+                        //
                         return img;
                     }
                 },abnnerModel.getTotal());

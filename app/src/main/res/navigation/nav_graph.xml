@@ -27,7 +27,7 @@
         tools:layout="@layout/targeted_fragment" />
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.qgj.juan_05.ui.fragment.UserFragment"
+        android:name="com.qgj.juan_05.ui.fragment.user.UserFragment"
         android:label="user_fragment"
         tools:layout="@layout/user_fragment" />
     <fragment

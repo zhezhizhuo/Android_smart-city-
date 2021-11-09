@@ -15,6 +15,7 @@ public class BusLineInfoModel {
     @SerializedName("msg")
     private String msg;
 
+
     public int getTotal() {
         return total;
     }
@@ -54,6 +55,7 @@ public class BusLineInfoModel {
         private Object createBy;
         @SerializedName("createTime")
         private Object createTime;
+
         @SerializedName("updateBy")
         private Object updateBy;
         @SerializedName("updateTime")

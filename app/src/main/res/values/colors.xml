@@ -9,4 +9,5 @@
     <color name="transparent">#0000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F30C0C</color>
+    <color name="serversbg">#44728072</color>
 </resources>

@@ -101,6 +101,13 @@ public class HomeFragment extends Fragment {
         loadServiceAll();
         //下面的新闻
         loadNewsAll();
+        //搜索功能
+        searchNews();
+    }
+
+    private void searchNews() {
+        //查找功能
+
     }
 
     /**

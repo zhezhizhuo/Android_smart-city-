@@ -22,7 +22,7 @@ public class PagerController {
                     controller.navigate(R.id.smartBusFragment,new Bundle());
                 break;
             case "outpatient/hospitalList":
-                controller.navigate(R.id.outpatientFragment,new Bundle());
+                controller.navigate(R.id.outpatientFragment);
                 break;
             case "天气预报":
                 controller.navigate(R.id.wearther_fragment,new Bundle());

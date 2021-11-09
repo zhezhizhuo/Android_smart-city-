@@ -12,19 +12,28 @@
         <com.qgj.juan_05.ui.view.BannerView
             android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="300dp"/>
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
         <TextView
             android:padding="10dp"
             android:id="@+id/count"
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
         <Button
             android:layout_marginTop="20dp"
             android:textSize="20dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/banner_bg"
             android:id="@+id/subscribe"
             android:text="预约挂号"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+
+            />
+    </LinearLayout>
     </LinearLayout>
 </FrameLayout>

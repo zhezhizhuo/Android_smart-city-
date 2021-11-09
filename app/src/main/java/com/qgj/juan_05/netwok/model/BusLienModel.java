@@ -48,6 +48,17 @@ public class BusLienModel {
     }
 
     public static class RowsDTO {
+
+        private BusLineInfoModel mInfoModel;
+
+        public BusLineInfoModel getInfoModel() {
+            return mInfoModel;
+        }
+
+        public void setInfoModel(BusLineInfoModel infoModel) {
+            mInfoModel = infoModel;
+        }
+
         @SerializedName("searchValue")
         private Object searchValue;
         @SerializedName("createBy")

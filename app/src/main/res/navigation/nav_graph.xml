@@ -59,10 +59,7 @@
         android:name="com.qgj.juan_05.ui.fragment.news.Newsinfo_Fragment"
         android:label="newsinfo__fragment"
         tools:layout="@layout/newsinfo__fragment" />
-    <fragment
-        android:id="@+id/typeServeFragment"
-        android:name="com.qgj.juan_05.ui.fragment.services.TypeServeFragment"
-        android:label="TypeServeFragment" />
+
     <fragment
         android:id="@+id/userFragment2"
         android:name="com.qgj.juan_05.ui.fragment.user.UserFragment"

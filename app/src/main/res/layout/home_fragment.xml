@@ -26,21 +26,22 @@
                     android:layout_width="285dp"
                     android:layout_height="50dp">
                     <ImageView
-                        android:paddingLeft="20dp"
+                       android:layout_margin="10dp"
                         android:layout_width="30dp"
                         android:background="@drawable/search"
                         android:layout_height="wrap_content"/>
                     <EditText
                         android:id="@+id/search"
                         android:lines="1"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="0dp"
                         android:background="@color/transparent"
                         android:layout_width="300dp"
                         android:hint="请输入搜索关键字"
                         android:layout_height="match_parent"/>
                 </LinearLayout>
                 <ImageButton
-                    android:layout_marginLeft="1dp"
+                    android:id="@+id/searchbth"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/search_button"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"/>

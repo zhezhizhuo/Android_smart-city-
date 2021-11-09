@@ -62,6 +62,13 @@ public class OutpatientFragment extends Fragment {
     private void initview() {
         RecyclerView.LayoutManager manager = new GridLayoutManager(getContext(),3);
         binding.body.setLayoutManager(manager);
+        //返回
+        binding.back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigateUp();
+            }
+        });
     }
 
 }

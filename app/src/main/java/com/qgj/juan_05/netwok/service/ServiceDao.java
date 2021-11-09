@@ -60,7 +60,6 @@ public interface ServiceDao {
     //根据id查询详细停车信息
     @GET("/prod-api/api/park/lot/{id}")
     Call<PackInfoModel>getPackInfoById(@Path("id") int id);
-
     //获取所有的记录
     @GET("/prod-api/api/park/lot/record/list")
     Call<PackJLModel>getPackJiLuAll();

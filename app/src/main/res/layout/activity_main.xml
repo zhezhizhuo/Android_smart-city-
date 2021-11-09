@@ -5,11 +5,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="ui.activity.MainActivity">
-
+        <ImageView
+            android:id="@+id/initimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     <androidx.fragment.app.FragmentContainerView
         android:layout_alignParentTop="true"
         android:id="@+id/a_main_nav_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
@@ -19,6 +23,7 @@
         android:id="@+id/a_main_bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_alignBottom="@id/a_main_nav_host"
         android:background="?android:attr/windowBackground"
         android:rotation="0"

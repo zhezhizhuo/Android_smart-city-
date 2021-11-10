@@ -18,8 +18,8 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/activiType"
             android:layout_width="match_parent"
-            app:tabIndicatorColor="@android:color/holo_blue_light"
-            android:background="@drawable/home_news_bg"
+            app:tabIndicatorColor="@color/red"
+            android:background="@color/white"
             app:tabMode="scrollable"
             android:layout_height="wrap_content"/>
         <View
@@ -28,7 +28,7 @@
             android:background="@color/transparent" />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activyInfo"
                 android:layout_marginBottom="50dp"

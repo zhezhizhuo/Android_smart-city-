@@ -103,7 +103,7 @@ public class ServicesBusLineAdapter extends RecyclerView.Adapter<ServicesBusLine
         holder.binding.end.setText(rowsDTO.getStartTime()+"-"+rowsDTO.getEndTime());
         holder.binding.begin.setText(rowsDTO.getStartTime()+"-"+rowsDTO.getEndTime());
         holder.binding.mileage.setText(rowsDTO.getMileage()+".0km");
-        holder.binding.prices.setText("  $"+rowsDTO.getPrice());
+        holder.binding.prices.setText("  💴"+rowsDTO.getPrice());
         if (rowsDTO.mInfoModel!=null) {
             RecyclerView.LayoutManager manager = new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false);
             holder.binding.liest.setLayoutManager(manager);

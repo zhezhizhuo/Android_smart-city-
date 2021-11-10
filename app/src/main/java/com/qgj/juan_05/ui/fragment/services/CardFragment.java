@@ -77,7 +77,7 @@ public class CardFragment extends Fragment {
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.outpatientFragment);
+                navController.navigateUp();
             }
         });
         binding.addcard.setOnClickListener(new View.OnClickListener() {

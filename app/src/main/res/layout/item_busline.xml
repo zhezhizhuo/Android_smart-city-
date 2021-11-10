@@ -15,11 +15,11 @@
             android:id="@+id/lienname"
             android:padding="5dp"
             android:layout_width="0dp"
-            android:layout_weight="0.9"
+            android:layout_weight="1"
             android:layout_height="wrap_content"/>
         <LinearLayout
             android:layout_gravity="center"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent">
@@ -43,7 +43,7 @@
                     android:text="$ 8.0"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
                     android:text="公里 :"
                     android:layout_height="wrap_content"/>
@@ -55,7 +55,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="0dp"

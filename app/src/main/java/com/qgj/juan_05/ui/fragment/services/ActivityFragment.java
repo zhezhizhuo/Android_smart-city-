@@ -1,5 +1,6 @@
 package com.qgj.juan_05.ui.fragment.services;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -152,5 +153,6 @@ public class ActivityFragment extends Fragment {
         //设置布局管理器
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         binding.activyInfo.setLayoutManager(manager);
+        binding.activiType.setTabTextColors(Color.GRAY,Color.RED);
     }
 }

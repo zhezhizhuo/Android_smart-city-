@@ -28,32 +28,32 @@
     <fragment
         android:id="@+id/userFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.UserFragment"
-        android:label="user_fragment"
+        android:label="个人中心"
         tools:layout="@layout/user_fragment" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.LoginFragment"
-        android:label="fragment_login"
+        android:label="登录页面"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/uppasswordFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.UppasswordFragment"
-        android:label="fragment_uppassword"
+        android:label="更新密码"
         tools:layout="@layout/fragment_uppassword" />
     <fragment
         android:id="@+id/upuserInfoFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.UpuserInfoFragment"
-        android:label="fragment_upuser_info"
+        android:label="修改个人信息"
         tools:layout="@layout/fragment_upuser_info" />
     <fragment
         android:id="@+id/userinfoFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.UserinfoFragment"
-        android:label="fragment_userinfo"
+        android:label="个人信息"
         tools:layout="@layout/fragment_userinfo" />
     <fragment
         android:id="@+id/feedbackFragment"
         android:name="com.qgj.juan_05.ui.fragment.user.FeedbackFragment"
-        android:label="FeedbackFragment" />
+        android:label="意见反馈" />
     <fragment
         android:id="@+id/newsinfo_Fragment"
         android:name="com.qgj.juan_05.ui.fragment.news.Newsinfo_Fragment"

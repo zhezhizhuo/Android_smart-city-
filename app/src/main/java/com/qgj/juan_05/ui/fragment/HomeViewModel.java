@@ -39,7 +39,7 @@ public class HomeViewModel extends ViewModel {
     private void loadbanner() {
         new Thread(()->{
             try {
-                mbnnerDate.postValue(ServiceDaoImpl.getBannerImg());
+                mbnnerDate.postValue(ServiceDaoImpl.getBannerType("2"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

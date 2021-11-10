@@ -66,7 +66,7 @@ public class NewsFragment extends Fragment {
         mHomeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         // TODO: Use the ViewModel
         //切换颜色
-        binding.newsheader.setTabTextColors(Color.WHITE,Color.argb(72,201,176, (float) 1.000));
+        binding.newsheader.setTabTextColors(Color.GRAY,Color.RED);
         //        加载轮播图
         loadebanner();
         loadNewsAll();

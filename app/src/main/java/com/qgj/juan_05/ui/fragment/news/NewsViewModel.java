@@ -36,7 +36,7 @@ public class NewsViewModel extends ViewModel {
     private void loadbanner() {
         new Thread(()->{
             try {
-                mbannerDate.postValue(ServiceDaoImpl.getBannerType("2"));
+                mbannerDate.postValue(ServiceDaoImpl.getBannerImg());
             } catch (IOException e) {
                 e.printStackTrace();
             }

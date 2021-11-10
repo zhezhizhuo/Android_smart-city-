@@ -11,6 +11,7 @@ import com.qgj.juan_05.netwok.model.BaoMing;
 import com.qgj.juan_05.netwok.model.BaoMingModel;
 import com.qgj.juan_05.netwok.model.BusLienModel;
 import com.qgj.juan_05.netwok.model.BusLineInfoModel;
+import com.qgj.juan_05.netwok.model.CardDepartmentModel;
 import com.qgj.juan_05.netwok.model.CardInfoModel;
 import com.qgj.juan_05.netwok.model.DataModel;
 import com.qgj.juan_05.netwok.model.FeedBackModel;
@@ -159,6 +160,10 @@ public  class ServiceDaoImpl {
     ////报名这个活动
     public static DataModel addCard(String token, AddCardModel bm) throws IOException {
         return Call(mServiceDao.addCard(token,bm));
+    }
+    ////查询所有科室
+    public static CardDepartmentModel getDepartmentAll() throws IOException {
+        return Call(mServiceDao.getDepartmentAll());
     }
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();

@@ -6,6 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.HomeFragment">
 <ScrollView
+    android:paddingLeft="10dp"
+    android:layout_marginRight="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,59 +15,63 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp">
-                <LinearLayout
-                    android:layout_marginLeft="25dp"
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/search_bg_color"
-                    android:layout_width="285dp"
-                    android:layout_height="50dp">
-                    <ImageView
-                       android:layout_margin="10dp"
-                        android:layout_width="30dp"
-                        android:background="@drawable/search"
-                        android:layout_height="wrap_content"/>
-                    <EditText
-                        android:id="@+id/search"
-                        android:lines="1"
-                        android:paddingLeft="0dp"
-                        android:background="@color/transparent"
-                        android:layout_width="300dp"
-                        android:hint="请输入搜索关键字"
-                        android:layout_height="match_parent"/>
-                </LinearLayout>
-                <ImageButton
-                    android:id="@+id/searchbth"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/search_button"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"/>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/search_bg_color"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:background="@drawable/search"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/search"
+                android:lines="1"
+                android:paddingLeft="0dp"
+                android:background="@color/transparent"
+                android:layout_width="300dp"
+                android:hint="请输入搜索关键字"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
 
-            </LinearLayout>
         <com.qgj.juan_05.ui.view.BannerView
             android:id="@+id/banner"
+
             android:layout_width="match_parent"
             android:layout_height="250dp"/>
+        <TextView
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:text="推荐服务"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/services"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/newsheader"
-            android:layout_width="match_parent"
-            app:tabIndicatorColor="@android:color/holo_blue_light"
-            android:background="@drawable/home_news_bg"
-            app:tabMode="scrollable"
-            android:layout_height="wrap_content"/>
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/newsheader"-->
+<!--            android:layout_width="match_parent"-->
+<!--            app:tabIndicatorColor="@android:color/holo_blue_light"-->
+<!--            android:background="@drawable/home_news_bg"-->
+<!--            app:tabMode="scrollable"-->
+<!--            android:layout_height="wrap_content"/>-->
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/transparent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="新闻专栏"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

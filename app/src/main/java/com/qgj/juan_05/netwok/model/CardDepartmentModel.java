@@ -4,17 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class BusLineInfoModel {
-
-    @Override
-    public String toString() {
-        return "BusLineInfoModel{" +
-                "total=" + total +
-                ", rows=" + rows +
-                ", code=" + code +
-                ", msg='" + msg + '\'' +
-                '}';
-    }
+public class CardDepartmentModel {
 
     @SerializedName("total")
     private int total;
@@ -58,23 +48,6 @@ public class BusLineInfoModel {
     }
 
     public static class RowsDTO {
-        @Override
-        public String toString() {
-            return "RowsDTO{" +
-                    "searchValue=" + searchValue +
-                    ", createBy=" + createBy +
-                    ", createTime=" + createTime +
-                    ", updateBy=" + updateBy +
-                    ", updateTime=" + updateTime +
-                    ", remark=" + remark +
-                    ", params=" + params +
-                    ", linesId=" + linesId +
-                    ", stepsId=" + stepsId +
-                    ", name='" + name + '\'' +
-                    ", sequence=" + sequence +
-                    '}';
-        }
-
         @SerializedName("searchValue")
         private Object searchValue;
         @SerializedName("createBy")
@@ -89,14 +62,14 @@ public class BusLineInfoModel {
         private Object remark;
         @SerializedName("params")
         private ParamsDTO params;
-        @SerializedName("linesId")
-        private int linesId;
-        @SerializedName("stepsId")
-        private int stepsId;
-        @SerializedName("name")
-        private String name;
-        @SerializedName("sequence")
-        private int sequence;
+        @SerializedName("id")
+        private int id;
+        @SerializedName("type")
+        private String type;
+        @SerializedName("categoryName")
+        private String categoryName;
+        @SerializedName("money")
+        private double money;
 
         public Object getSearchValue() {
             return searchValue;
@@ -154,36 +127,36 @@ public class BusLineInfoModel {
             this.params = params;
         }
 
-        public int getLinesId() {
-            return linesId;
+        public int getId() {
+            return id;
         }
 
-        public void setLinesId(int linesId) {
-            this.linesId = linesId;
+        public void setId(int id) {
+            this.id = id;
         }
 
-        public int getStepsId() {
-            return stepsId;
+        public String getType() {
+            return type;
         }
 
-        public void setStepsId(int stepsId) {
-            this.stepsId = stepsId;
+        public void setType(String type) {
+            this.type = type;
         }
 
-        public String getName() {
-            return name;
+        public String getCategoryName() {
+            return categoryName;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
         }
 
-        public int getSequence() {
-            return sequence;
+        public double getMoney() {
+            return money;
         }
 
-        public void setSequence(int sequence) {
-            this.sequence = sequence;
+        public void setMoney(double money) {
+            this.money = money;
         }
 
         public static class ParamsDTO {

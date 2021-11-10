@@ -2,11 +2,14 @@ package com.qgj.juan_05.adpater;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ItemCardBinding;
 import com.qgj.juan_05.databinding.ItemWearthercenterBinding;
 import com.qgj.juan_05.netwok.model.CardInfoModel;
@@ -20,17 +23,18 @@ public class ServicesCardAdapter extends RecyclerView.Adapter<ServicesCardAdapte
 
     List<CardInfoModel.RowsDTO> mList;
     Context mContext;
-
-    public ServicesCardAdapter(List<CardInfoModel.RowsDTO>  list, Context context) {
+    NavController navController;
+    public ServicesCardAdapter(List<CardInfoModel.RowsDTO>  list, Context context, NavController navController ) {
         mList = list;
         mContext = context;
+        this.navController=navController;
     }
 
     @NonNull
     @NotNull
     @Override
     public ServicesCardAdapter.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        ItemCardBinding binding = ItemCardBinding.inflate(LayoutInflater.from(mContext));
+        ItemCardBinding binding = ItemCardBinding.inflate(LayoutInflater.from(mContext),parent,false);
         return new ServicesCardAdapter.ViewHolder(binding);
     }
 
@@ -42,6 +46,12 @@ public class ServicesCardAdapter extends RecyclerView.Adapter<ServicesCardAdapte
         holder.binding.iphone.setText("手机号码 :  "+data.getCardId());
         holder.binding.sfz.setText("身份证 :  "+data.getTel());
         holder.binding.blh.setText("病例号 :  "+data.getId());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.reservationFragment);
+            }
+        });
     }
 
     @Override

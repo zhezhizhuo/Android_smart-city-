@@ -2,155 +2,106 @@
 <LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:orientation="vertical"
-    android:layout_marginTop="10dp"
-
-    android:padding="10dp"
+    android:padding="5dp"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:text="一号线"
+            android:id="@+id/lienname"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"/>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
             <TextView
-                android:id="@+id/lienname"
-                android:text="一号线"
-                android:lines="1"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:padding="10dp"
+                android:id="@+id/begin_end"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp">
+                android:text=""
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
             <LinearLayout
-                android:padding="5dp"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp">
-                <TextView
-                    android:textColor="@color/black"
-
-                    android:id="@+id/first"
-                    android:layout_width="wrap_content"
-                    android:text="光谷金融街"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text=" -- "
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/end"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="南湖大厦"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:padding="5dp"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp">
+                android:layout_weight="1"
+                android:layout_height="0dp">
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="票价:"
+                    android:text="票价 :"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:paddingLeft="5dp"
                     android:id="@+id/prices"
                     android:layout_width="wrap_content"
-                    android:text=" $80"
+                    android:text="$ 8.0"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:text="里程:"
+                    android:text="公里 :"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/mileage"
-                    android:paddingLeft="5dp"
                     android:layout_width="wrap_content"
-                    android:text="80.km"
+                    android:text="20.0km"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingLeft="10dp">
-
-            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/begin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-
-                    android:layout_height="match_parent"
-                    android:text="开始时间"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/startTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="6:30"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-
+                android:text="06:45-19:45"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/end"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="结束时间"
-
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/endTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="10dp"
-                    android:text="6:30"
-                    android:textColor="@color/black" />
-            </LinearLayout>
+                android:text="06:45-19:45"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/checked"
+                android:layout_width="50dp"
+                android:src="@drawable/user_ico_back"
+                android:layout_height="35dp"/>
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/list_item"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/liest"
-            android:dividerHeight="1dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/liest"
+                android:scrollbars="none"
+                android:fadeScrollbars="false"
+                android:visibility="gone"
+                android:dividerHeight="0dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_height="1dp"/>
+        android:background="#4343"
+        android:layout_height="0.5dp"/>
 </LinearLayout>

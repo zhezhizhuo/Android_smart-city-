@@ -120,4 +120,7 @@ public interface ServiceDao {
     //添加就诊卡
     @POST("/prod-api/api/hospital/patient")
     Call<DataModel> addCard(@Header("Authorization") String Authorization,@Body AddCardModel addCardModel);
+    //查询所有科室
+    @GET("/prod-api/api/hospital/category/list")
+    Call<CardDepartmentModel> getDepartmentAll();
 }

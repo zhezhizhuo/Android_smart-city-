@@ -15,6 +15,16 @@ public class BusLienModel {
     @SerializedName("msg")
     private String msg;
 
+    @Override
+    public String toString() {
+        return "BusLienModel{" +
+                "total=" + total +
+                ", rows=" + rows +
+                ", code=" + code +
+                ", msg='" + msg + '\'' +
+                '}';
+    }
+
     public int getTotal() {
         return total;
     }
@@ -47,16 +57,29 @@ public class BusLienModel {
         this.msg = msg;
     }
 
-    public static class RowsDTO {
+    public  class RowsDTO {
+        public List<BusLineInfoModel.RowsDTO> mInfoModel;
 
-        private BusLineInfoModel mInfoModel;
-
-        public BusLineInfoModel getInfoModel() {
-            return mInfoModel;
-        }
-
-        public void setInfoModel(BusLineInfoModel infoModel) {
-            mInfoModel = infoModel;
+        @Override
+        public String toString() {
+            return "RowsDTO{" +
+                    "mInfoModel=" + mInfoModel.toString() +
+                    ", searchValue=" + searchValue +
+                    ", createBy=" + createBy +
+                    ", createTime='" + createTime + '\'' +
+                    ", updateBy=" + updateBy +
+                    ", updateTime='" + updateTime + '\'' +
+                    ", remark=" + remark +
+                    ", params=" + params +
+                    ", id=" + id +
+                    ", name='" + name + '\'' +
+                    ", first='" + first + '\'' +
+                    ", end='" + end + '\'' +
+                    ", startTime='" + startTime + '\'' +
+                    ", endTime='" + endTime + '\'' +
+                    ", price=" + price +
+                    ", mileage='" + mileage + '\'' +
+                    '}';
         }
 
         @SerializedName("searchValue")
@@ -210,7 +233,7 @@ public class BusLienModel {
             this.mileage = mileage;
         }
 
-        public static class ParamsDTO {
+        public  class ParamsDTO {
         }
     }
 }

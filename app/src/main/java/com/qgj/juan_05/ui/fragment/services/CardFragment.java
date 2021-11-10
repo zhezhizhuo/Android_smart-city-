@@ -58,7 +58,7 @@ public class CardFragment extends Fragment {
                 CardInfoModel cardInfo = ServiceDaoImpl.getCardInfo(MainActivity.token);
                 Log.e("TGA",cardInfo.getMsg());
 
-                ServicesCardAdapter adapter = new ServicesCardAdapter(cardInfo.getRows(),getActivity());
+                ServicesCardAdapter adapter = new ServicesCardAdapter(cardInfo.getRows(),getActivity(),navController);
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -73,7 +73,7 @@ public class CardFragment extends Fragment {
     }
 
     private void initview() {
-        binding.card.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
+        binding.card.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,true));
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

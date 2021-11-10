@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
                 RecyclerView.LayoutManager manager = new GridLayoutManager(getContext(), 5);
                 binding.services.setLayoutManager(manager);
         //设置tobler的选择颜色
-        binding.newsheader.setTabTextColors(Color.WHITE,Color.YELLOW);
+       // binding.newsheader.setTabTextColors(Color.WHITE,Color.YELLOW);
         binding.search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
@@ -100,9 +100,10 @@ public class HomeFragment extends Fragment {
         //加载全部服务
         loadServiceAll();
         //下面的新闻
-        loadNewsAll();
+      //  loadNewsAll();
         //搜索功能
         searchNews();
+        loadNewsListView(17);
     }
 
     private void searchNews() {
@@ -141,30 +142,30 @@ public class HomeFragment extends Fragment {
     /**
      * 加载新闻分类
      */
-    private void loadNewsAll() {
-        mViewModel.getNewslbData().observe(getViewLifecycleOwner(),s->{
-            List<HomeNewsModel.DataDTO> dataBeans = s.getData();
-            for (HomeNewsModel.DataDTO dataBean : dataBeans) {
-                binding.newsheader.addTab(binding.newsheader.newTab().setText(dataBean.getName()).setTag(dataBean));
-            }
-            loadNewsListView(dataBeans.get(0).getId());// 加载第一个 下面的数据方法
-            binding.newsheader.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {//当用户选择的时候回调这个事件
-                    HomeNewsModel.DataDTO data = (HomeNewsModel.DataDTO) tab.getTag();
-                    //重新加载
-                    loadNewsListView(data.getId());
-                }
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {
-                }
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {
-                }
-            });
-        });
-    }
+//    private void loadNewsAll() {
+//        mViewModel.getNewslbData().observe(getViewLifecycleOwner(),s->{
+//            List<HomeNewsModel.DataDTO> dataBeans = s.getData();
+//            for (HomeNewsModel.DataDTO dataBean : dataBeans) {
+//                binding.newsheader.addTab(binding.newsheader.newTab().setText(dataBean.getName()).setTag(dataBean));
+//            }
+//            loadNewsListView(dataBeans.get(0).getId());// 加载第一个 下面的数据方法
+//            binding.newsheader.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//                @Override
+//                public void onTabSelected(TabLayout.Tab tab) {//当用户选择的时候回调这个事件
+//                    HomeNewsModel.DataDTO data = (HomeNewsModel.DataDTO) tab.getTag();
+//                    //重新加载
+//                    loadNewsListView(data.getId());
+//                }
+//                @Override
+//                public void onTabUnselected(TabLayout.Tab tab) {
+//                }
+//
+//                @Override
+//                public void onTabReselected(TabLayout.Tab tab) {
+//                }
+//            });
+//        });
+//    }
 
     private void loadNewsListView(int id) {
         new Thread(new Runnable() {
@@ -221,9 +222,9 @@ public class HomeFragment extends Fragment {
                     }
                 });
                 // 删除多余的
-                while (rows.size()>10) {
-                    rows.remove(rows.size() - 1);
-                }
+//                while (rows.size()>10) {
+//                    rows.remove(rows.size() - 1);
+//                }
                 HomeServiceAdapter serviceAdapter = new HomeServiceAdapter(rows,getActivity(),navController);
                 binding.services.setAdapter(serviceAdapter);
             }

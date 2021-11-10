@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.services.CardFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".ui.fragment.services.ReservationFragment">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_margin="10dp"
@@ -30,29 +33,18 @@
             <TextView
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="预约挂号"
+                android:text="预约挂号科室"
                 android:textSize="20dp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="450dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_centerHorizontal="true"
-            android:layout_margin="15dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/card"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </RelativeLayout>
-        <Button
-            android:id="@+id/addcard"
-            android:layout_width="match_parent"
-            android:text="+新增就诊人"
-            android:textSize="20dp"
-            android:layout_height="100dp"/>
     </LinearLayout>
 
+        <ListView
+            android:id="@+id/listview"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 </FrameLayout>

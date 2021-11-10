@@ -82,17 +82,17 @@ public class ServicesFragment extends Fragment {
     //被点击的按钮
     LinearLayout temp;
     private void onclickServoceyTpe() {
-        binding.bg.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
-        temp= binding.bmfw;
-        temp.setBackgroundColor(Color.WHITE);
+//        binding.bg.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
+//        temp= binding.bmfw;
+//        temp.setBackgroundColor(Color.WHITE);
           binding.bmfw.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
 //                  Bundle bundle = new Bundle();
 //                  bundle.putString("serviceType",binding.bmtext.getText().toString());
-                  temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
-                  temp = binding.bmfw;
-                  temp.setBackgroundColor(Color.WHITE);
+//                  temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
+//                  temp = binding.bmfw;
+//                  temp.setBackgroundColor(Color.WHITE);
                   //设置数据
                   mViewModel.getMserviceall().observe(getViewLifecycleOwner(), new Observer<HomeServiceModel>() {
                       @Override
@@ -121,9 +121,9 @@ public class ServicesFragment extends Fragment {
 //                bundle.putString("serviceType",binding.cztext.getText().toString());
 //               // Toast.makeText(getActivity(), binding.cztext.getText().toString(), Toast.LENGTH_SHORT).show();
 //                navController.navigate(R.id.typeServeFragment,bundle);
-                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
-                temp = binding.czfw;
-                temp.setBackgroundColor(Color.WHITE);
+//                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
+//                temp = binding.czfw;
+//                temp.setBackgroundColor(Color.WHITE);
                 mViewModel.getMserviceall().observe(getViewLifecycleOwner(), new Observer<HomeServiceModel>() {
                     @Override
                     public void onChanged(HomeServiceModel homeServiceModel) {
@@ -151,9 +151,9 @@ public class ServicesFragment extends Fragment {
 //                bundle.putString("serviceType",binding.chtext.getText().toString());
 //               // Toast.makeText(getActivity(), binding.chtext.getText().toString(), Toast.LENGTH_SHORT).show();
 //                navController.navigate(R.id.typeServeFragment,bundle);
-                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
-                temp = binding.shfw;
-                temp.setBackgroundColor(Color.WHITE);
+//                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
+//                temp = binding.shfw;
+//                temp.setBackgroundColor(Color.WHITE);
                 mViewModel.getMserviceall().observe(getViewLifecycleOwner(), new Observer<HomeServiceModel>() {
                     @Override
                     public void onChanged(HomeServiceModel homeServiceModel) {
@@ -181,24 +181,15 @@ public class ServicesFragment extends Fragment {
 //                bundle.putString("serviceType",binding.moretext.getText().toString());
 //               // Toast.makeText(getActivity(), binding.moretext.getText().toString(), Toast.LENGTH_SHORT).show();
 //                navController.navigate(R.id.typeServeFragment,bundle);
-                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
-                temp = binding.more;
-                temp.setBackgroundColor(Color.WHITE);
+//                temp.setBackgroundColor(getActivity().getResources().getColor(R.color.serversbg));
+//                temp = binding.more;
+//                temp.setBackgroundColor(Color.WHITE);
                 mViewModel.getMserviceall().observe(getViewLifecycleOwner(), new Observer<HomeServiceModel>() {
                     @Override
                     public void onChanged(HomeServiceModel homeServiceModel) {
-                        List<HomeServiceModel.RowsDTO> newss = new ArrayList<>();
                         List<HomeServiceModel.RowsDTO> rows = homeServiceModel.getRows();
-                        for (HomeServiceModel.RowsDTO row : rows) {
-                            if (row.getServiceType().equals(binding.moretext.getText().toString())) {
-                                newss.add(row);
-                            }
-                        }
-                        //  添加到适配器里面
-                        if (newss.size()==0){
-                            return;
-                        }
-                        HomeServiceAdapter serviceAdapter = new HomeServiceAdapter(newss,getContext(),navController);
+
+                        HomeServiceAdapter serviceAdapter = new HomeServiceAdapter(rows,getContext(),navController);
                         setRightData(serviceAdapter);
                     }
                 });

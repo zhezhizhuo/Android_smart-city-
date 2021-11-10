@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.qgj.juan_05.ui.fragment.HomeFragment"
-        android:label="home_fragment"
+        android:label="首页"
         tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/newsFragment"
@@ -57,7 +57,7 @@
     <fragment
         android:id="@+id/newsinfo_Fragment"
         android:name="com.qgj.juan_05.ui.fragment.news.Newsinfo_Fragment"
-        android:label="newsinfo__fragment"
+        android:label="新闻详情"
         tools:layout="@layout/newsinfo__fragment" />
 
     <fragment
@@ -80,17 +80,17 @@
     <fragment
         android:id="@+id/hospitalFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.HospitalFragment"
-        android:label="fragment_hospital"
+        android:label="预约挂号"
         tools:layout="@layout/fragment_hospital" />
     <fragment
         android:id="@+id/smartBusFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.SmartBusFragment"
-        android:label="fragment_smart_bus"
+        android:label="智慧巴士"
         tools:layout="@layout/fragment_smart_bus" />
     <fragment
         android:id="@+id/activityFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.ActivityFragment"
-        android:label="fragment_activity"
+        android:label="活动管理"
         tools:layout="@layout/fragment_activity" />
     <fragment
         android:id="@+id/activityInfoFragment"
@@ -114,11 +114,16 @@
     <fragment
         android:id="@+id/addCardFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.AddCardFragment"
-        android:label="fragment_add_card"
+        android:label="添加就诊卡"
         tools:layout="@layout/fragment_add_card" />
     <fragment
         android:id="@+id/departmentFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.DepartmentFragment"
         android:label="fragment_department"
         tools:layout="@layout/fragment_department" />
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.ReservationFragment"
+        android:label="fragment_reservation"
+        tools:layout="@layout/fragment_reservation" />
 </navigation>

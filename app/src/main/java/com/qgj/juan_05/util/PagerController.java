@@ -30,6 +30,9 @@ public class PagerController {
             case "activity/index":
                 controller.navigate(R.id.activityFragment,new Bundle());
                 break;
+            case "movie/index":
+                controller.navigate(R.id.moviesfragment,new Bundle());
+                break;
             case "违规查询":
                 controller.navigate(R.id.wearther_fragment,new Bundle());
                 break;

@@ -15,6 +15,7 @@ import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ItemHomenewsBinding;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
+import com.qgj.juan_05.util.TextUtil;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -51,7 +52,7 @@ public class HomeNewsInfoAdapter extends RecyclerView.Adapter<HomeNewsInfoAdapte
         //评论数量
         holder.binding.commentNum.setText(dataDTO.getCommentNum()+"评论量");
         holder.binding.newsTitlt.setText(dataDTO.getTitle());
-        holder.binding.newsContent.setText(dataDTO.getContent());
+        holder.binding.newsContent.setText(TextUtil.FormatString(dataDTO.getContent()));
         //阅读数量
         holder.binding.read.setText(String.valueOf(dataDTO.getReadNum())+"阅读量");
         //加载图片

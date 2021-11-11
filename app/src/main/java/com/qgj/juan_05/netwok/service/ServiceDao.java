@@ -123,4 +123,16 @@ public interface ServiceDao {
     //查询所有科室
     @GET("/prod-api/api/hospital/category/list")
     Call<CardDepartmentModel> getDepartmentAll();
+    //查询影片信息列
+    @GET("/prod-api/api/movie/film/list")
+    Call<MovieModel> getMovieAll();
+    //
+    @GET("/prod-api/api/movie/film/preview/list")
+    Call<HotMovieModel> getMovieHotAll();
+    //根据id查看所有的xinx
+    @GET("/prod-api/api/movie/film/detail/{id}")
+    Call<MoviesInfoModel> getMovieInfoById(@Path("id")int id);
+    //根据id查看所有的评论
+    @GET("/prod-api/api/movie/film/comment/list")
+    Call<MoviePlModel> getMoviePlById(@Query("movieId") int id);
 }

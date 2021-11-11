@@ -16,6 +16,7 @@ import com.qgj.juan_05.databinding.ItemHomenewsBinding;
 import com.qgj.juan_05.netwok.model.ActivyInfoModel;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
+import com.qgj.juan_05.util.TextUtil;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -53,7 +54,7 @@ public class ServicesActivityAdapter  extends RecyclerView.Adapter<ServicesActiv
         //评论数量
         holder.binding.commentNum.setText(dataDTO.getSignupNum() + "报名人数");
         holder.binding.newsTitlt.setText(dataDTO.getName());
-        holder.binding.newsContent.setText(dataDTO.getContent());
+        holder.binding.newsContent.setText(TextUtil.FormatString(dataDTO.getContent()));
         //阅读数量
         holder.binding.read.setText("是否推荐:  "+(dataDTO.getRecommend().equals("Y")== true ? "是":"不是"));
         //加载图片

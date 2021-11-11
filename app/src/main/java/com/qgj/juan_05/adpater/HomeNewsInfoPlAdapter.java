@@ -17,6 +17,7 @@ import com.qgj.juan_05.databinding.ItemPlBinding;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.netwok.model.NewsInfoplModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
+import com.qgj.juan_05.util.TextUtil;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -45,7 +46,7 @@ public class HomeNewsInfoPlAdapter  extends RecyclerView.Adapter<HomeNewsInfoPlA
     public void onBindViewHolder(@NonNull @NotNull HomeNewsInfoPlAdapter.ViewHolder holder, int position) {
         //获取数据元
         NewsInfoplModel.RowsDTO rowsDTO = mList.get(position);
-        holder.binding.content.setText(rowsDTO.getContent());
+        holder.binding.content.setText(TextUtil.FormatString(rowsDTO.getContent()));
         holder.binding.username.setText("昵称: "+rowsDTO.getUserName());
         holder.binding.datime.setText(rowsDTO.getCommentDate());
     }

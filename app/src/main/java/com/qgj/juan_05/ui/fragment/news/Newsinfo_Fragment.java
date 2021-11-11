@@ -22,6 +22,7 @@ import com.qgj.juan_05.databinding.NewsinfoFragmentBinding;
 import com.qgj.juan_05.netwok.model.NewsInfoModel;
 import com.qgj.juan_05.netwok.model.NewsInfoplModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
+import com.qgj.juan_05.util.TextUtil;
 
 
 public class Newsinfo_Fragment extends Fragment {
@@ -88,7 +89,7 @@ public class Newsinfo_Fragment extends Fragment {
                 //图片
                 Glide.with(getActivity()).load(MainActivity.serverURL+data.getCover()).into(bind.cover);
                 //内容
-                bind.content.setText(data.getContent());
+                bind.content.setText(TextUtil.FormatString(data.getContent()));
                 //副标题
                 bind.subTitle.setText(data.getSubTitle());
                 //幅图片

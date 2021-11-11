@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class MainActivity extends AppCompatActivity {
     final String TAG = "MainActivity";
     private ActivityMainBinding binding;
-    public static String token="eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImUyOTY3Y2YzLWVjYjYtNGNkYy1hOGFiLTk2ZmM3NTNhMDZjMSJ9.bZJbGXJ9d7sUIBSQBACiS-RmTegJM1nO8sCE6hC39_NLEPK2PjQY64UScXo7diwVlLaM6n2REM_2uN7bw52xBA";
+    public static String token="";
     public static String serverURL = "http://124.93.196.45:10001";
 
 
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         if (sharedPreferences.getBoolean("first",true)) {//默认是第一次进入
             startActivity(new Intent(MainActivity.this,GuildFragment.class));
         }else {
-
         }
         }).start();
     }

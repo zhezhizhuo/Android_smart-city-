@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.Moviesfragment">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:hint="搜索想要看的电影"
+            android:paddingLeft="20dp"
+            android:background="@drawable/movie_boder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/moview_item"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="10dp"
+                android:text="当前热映"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+            <LinearLayout
+
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/hotnum"
+                    android:text="全部21部"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+                <ImageView
+                    android:backgroundTint="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/user_ico_back"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:id="@+id/hotmvie"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

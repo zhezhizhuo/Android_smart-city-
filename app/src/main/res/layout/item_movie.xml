@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:id="@+id/image"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/titile"
+            android:text="我的姐姐"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/bth"
+            android:background="@drawable/movie_bth"
+            android:layout_width="wrap_content"
+            android:text="购票"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_height="30dp"/>
+</LinearLayout>

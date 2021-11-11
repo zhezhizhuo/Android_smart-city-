@@ -18,7 +18,11 @@ import com.qgj.juan_05.netwok.model.FeedBackModel;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.netwok.model.HomeNewsModel;
 import com.qgj.juan_05.netwok.model.HomeServiceModel;
+import com.qgj.juan_05.netwok.model.HotMovieModel;
 import com.qgj.juan_05.netwok.model.LoginModel;
+import com.qgj.juan_05.netwok.model.MovieModel;
+import com.qgj.juan_05.netwok.model.MoviePlModel;
+import com.qgj.juan_05.netwok.model.MoviesInfoModel;
 import com.qgj.juan_05.netwok.model.NewsInfoModel;
 import com.qgj.juan_05.netwok.model.NewsInfoplModel;
 import com.qgj.juan_05.netwok.model.OutAbnnerModel;
@@ -164,6 +168,23 @@ public  class ServiceDaoImpl {
     ////查询所有科室
     public static CardDepartmentModel getDepartmentAll() throws IOException {
         return Call(mServiceDao.getDepartmentAll());
+    }
+    //查询影片信息列
+    public static MovieModel getMovieAll() throws IOException {
+        return Call(mServiceDao.getMovieAll());
+    }
+    //查询预告影片信息列
+    public static HotMovieModel getMovieHotAll() throws IOException {
+        return Call(mServiceDao.getMovieHotAll());
+    }
+    //   查询电影i新
+    //查询影片信息列
+    public static MoviesInfoModel getMovieInfoById(int id) throws IOException {
+        return Call(mServiceDao.getMovieInfoById(id));
+    }
+    //查询影片信息pl
+    public static MoviePlModel getMoviePlById(int id) throws IOException {
+        return Call(mServiceDao.getMoviePlById(id));
     }
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();

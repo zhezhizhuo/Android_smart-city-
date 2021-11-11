@@ -126,4 +126,14 @@
         android:name="com.qgj.juan_05.ui.fragment.services.ReservationFragment"
         android:label="fragment_reservation"
         tools:layout="@layout/fragment_reservation" />
+    <fragment
+        android:id="@+id/moviesfragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.Moviesfragment"
+        android:label="在线影院"
+        tools:layout="@layout/fragment_moviesfragment" />
+    <fragment
+        android:id="@+id/movieInfoFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.MovieInfoFragment"
+        android:label="电影详情"
+        tools:layout="@layout/movie_info_fragment" />
 </navigation>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
@@ -88,6 +89,32 @@ public class MovieInfoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "暂无视频", Toast.LENGTH_SHORT).show();
+                NavHostFragment.findNavController(MovieInfoFragment.this).navigate(R.id.trailerFragment,new Bundle());
+
+            }
+        });
+        //跳转
+        binding.buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("id",id);
+                NavHostFragment.findNavController(MovieInfoFragment.this).navigate(R.id.cinemaFragment,bundle);
+            }
+        });
+        //想看
+        binding.like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "想看成功", Toast.LENGTH_SHORT).show();
+            }
+        });
+        //看过
+        binding.look.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "看过成功", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

@@ -136,4 +136,14 @@
         android:name="com.qgj.juan_05.ui.fragment.services.MovieInfoFragment"
         android:label="电影详情"
         tools:layout="@layout/movie_info_fragment" />
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.CinemaFragment"
+        android:label="cinema_fragment"
+        tools:layout="@layout/cinema_fragment" />
+    <fragment
+        android:id="@+id/trailerFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.TrailerFragment"
+        android:label="fragment_trailer"
+        tools:layout="@layout/fragment_trailer" />
 </navigation>

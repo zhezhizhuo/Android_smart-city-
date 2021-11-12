@@ -48,9 +48,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull @NotNull MovieAdapter.ViewHolder holder, int position) {
         //获取数据元
-        if (position==0){
-            return;
-        }
         MovieModel.RowsDTO rowsDTO = mList.get(position);
 
         //图片

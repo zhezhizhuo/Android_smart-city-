@@ -180,8 +180,7 @@
                 android:id="@+id/zpl"
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
-                android:text="总评论: 2121 条"
-                android:layout_marginRight="100dp"
+                android:layout_marginRight="140dp"
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content"/>
             <Button
@@ -190,8 +189,8 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/movie_bth"
                 android:textColor="@color/white"
-                android:textSize="10dp"
-                android:layout_width="60dp"
+                android:textSize="12sp"
+                android:layout_width="80dp"
                 android:text="写评论"
                 android:layout_height="30dp"/>
         </RelativeLayout>
@@ -200,10 +199,12 @@
             android:layout_height="match_parent">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/revpl"
+                android:layout_marginBottom="50dp"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
             <Button
+                android:id="@+id/buy"
                 android:layout_alignParentBottom="true"
                 android:background="@color/red"
                 android:text="购票"

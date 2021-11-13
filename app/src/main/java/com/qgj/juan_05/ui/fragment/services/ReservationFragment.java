@@ -28,9 +28,6 @@ public class ReservationFragment extends Fragment {
 
     FragmentReservationBinding binding;
 
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

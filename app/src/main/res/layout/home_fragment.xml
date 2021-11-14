@@ -17,10 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:paddingLeft="10dp"
-            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+               <LinearLayout
+            android:layout_margin="10dp"
             android:background="@drawable/search_bg_color"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp">
             <ImageView
                 android:layout_margin="10dp"
@@ -35,6 +37,7 @@
                 android:layout_width="300dp"
                 android:hint="请输入搜索关键字"
                 android:layout_height="match_parent"/>
+        </LinearLayout>
         </LinearLayout>
 
         <com.qgj.juan_05.ui.view.BannerView

@@ -2,7 +2,9 @@ package com.qgj.juan_05.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.qgj.juan_05.R;
@@ -17,6 +19,14 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
+        SharedPreferences sharedPreferences =getSharedPreferences("pz", Context.MODE_PRIVATE);
+        boolean  first = sharedPreferences.getBoolean("first", true);
+        if (first){
+            //不是
+             startActivity(new Intent(SplashActivity.this,GuildeActivity.class));
+        }else {
+            //是
+        }
         init();
     }
 

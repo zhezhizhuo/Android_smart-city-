@@ -88,7 +88,6 @@ public class MovieInfoFragment extends Fragment {
         binding.bofang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "暂无视频", Toast.LENGTH_SHORT).show();
                 NavHostFragment.findNavController(MovieInfoFragment.this).navigate(R.id.trailerFragment,new Bundle());
 
             }

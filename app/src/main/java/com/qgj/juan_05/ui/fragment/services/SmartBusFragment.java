@@ -73,7 +73,6 @@ public class SmartBusFragment extends Fragment {
 //                       }
 //                   });
                     new Thread(()->{
-
                         try {
                             BusLienModel busLienAll = ServiceDaoImpl.getBusLienAll();
                             for (BusLienModel.RowsDTO row : busLienAll.getRows()) {

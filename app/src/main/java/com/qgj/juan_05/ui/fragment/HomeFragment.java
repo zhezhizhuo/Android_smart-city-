@@ -221,10 +221,11 @@ public class HomeFragment extends Fragment {
                         return rowsBean.getSort() - t1.getSort();
                     }
                 });
-                // 删除多余的
-//                while (rows.size()>10) {
-//                    rows.remove(rows.size() - 1);
-//                }
+              //   删除多余的
+                while (rows.size()>10) {
+                    rows.remove(rows.size() - 1);
+                }
+                rows.get(rows.size()-1).setServiceName("更多服务");
                 HomeServiceAdapter serviceAdapter = new HomeServiceAdapter(rows,getActivity(),navController);
                 binding.services.setAdapter(serviceAdapter);
             }

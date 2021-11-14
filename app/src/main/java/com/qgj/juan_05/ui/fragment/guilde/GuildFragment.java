@@ -50,16 +50,13 @@ public class GuildFragment extends AppCompatActivity {
         getSupportActionBar().hide();
 
         //适配器模式
-        if (first){//如果是第一次登录那就进去引导页面
+        //如果是第一次登录那就进去引导页面
             initimg();
             ititview();
             initEven();
             initbth();
             initPotion();
             binding.bth1.setSelected(true);
-        }else { //不是第一次登录 进入初始化页面
-
-        }
     }
 
     private void initPotion() {
@@ -185,6 +182,5 @@ public class GuildFragment extends AppCompatActivity {
                 return img;
             }
         });
-
     }
 }

@@ -144,6 +144,6 @@
     <fragment
         android:id="@+id/trailerFragment"
         android:name="com.qgj.juan_05.ui.fragment.services.TrailerFragment"
-        android:label="fragment_trailer"
+        android:label="电影预告"
         tools:layout="@layout/fragment_trailer" />
 </navigation>

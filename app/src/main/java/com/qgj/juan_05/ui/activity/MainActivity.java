@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     final String TAG = "MainActivity";
     private ActivityMainBinding binding;
     public static String token="";
-    public static String serverURL = "http://124.93.196.45:10001";
+    public static String serverURL = "http://124.93.196.45:10001/";
 
 
     NavHostFragment navHostFragment;

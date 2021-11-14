@@ -10,6 +10,7 @@ import androidx.navigation.NavController;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ItemServiceBinding;
 import com.qgj.juan_05.netwok.model.HomeServiceModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
@@ -43,10 +44,15 @@ public class HomeServiceAdapter extends RecyclerView.Adapter<HomeServiceAdapter.
         //获取数据元
         HomeServiceModel.RowsDTO rowsDTO = mList.get(position);
         holder.binding.iServiceTitle.setText(rowsDTO.getServiceName());
-        Glide.with(mContext)
-                .load(MainActivity.serverURL + rowsDTO.getImgUrl())
-                .fitCenter()
-                .into(holder.binding.iServiceImage);
+        if (position==9){
+            rowsDTO.setLink("more");
+            holder.binding.iServiceImage.setImageDrawable(mContext.getDrawable(R.drawable.service_type_more));
+        }else {
+            Glide.with(mContext)
+                    .load(MainActivity.serverURL + rowsDTO.getImgUrl())
+                    .fitCenter()
+                    .into(holder.binding.iServiceImage);
+        }
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

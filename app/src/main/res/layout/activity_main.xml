@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:background="?android:attr/windowBackground"
             android:rotation="0"
-            android:stateListAnimator="@anim/slide_from_left"
             app:itemIconTint="@drawable/ic_selector_nav_colors"
             app:itemTextColor="@drawable/ic_selector_nav_colors"
             app:labelVisibilityMode="labeled"

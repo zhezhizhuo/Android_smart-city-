@@ -146,4 +146,19 @@
         android:name="com.qgj.juan_05.ui.fragment.services.TrailerFragment"
         android:label="电影预告"
         tools:layout="@layout/fragment_trailer" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.qgj.juan_05.ui.activity.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
+    <fragment
+        android:id="@+id/dateTimeFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.DateTimeFragment"
+        android:label="乘车日期"
+        tools:layout="@layout/fragment_date_time" />
 </navigation>

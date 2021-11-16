@@ -36,9 +36,9 @@ public class BannerView extends LinearLayout {
     }
 
     public BannerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        binding = ItemPagerBinding.inflate(LayoutInflater.from(context));
-        initEven();
+         super(context, attrs, defStyleAttr);
+         binding = ItemPagerBinding.inflate(LayoutInflater.from(context));
+         initEven();
          addView(binding.getRoot());
     }
 

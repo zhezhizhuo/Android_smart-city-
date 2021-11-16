@@ -123,6 +123,8 @@ public interface ServiceDao {
     //查询所有科室
     @GET("/prod-api/api/hospital/category/list")
     Call<CardDepartmentModel> getDepartmentAll();
+    @GET("/prod-api/api/hospital/category/list")
+    Call<CardDepartmentModel> getDepartmentAll(@Query("type") int type);
     //查询影片信息列
     @GET("/prod-api/api/movie/film/list")
     Call<MovieModel> getMovieAll();

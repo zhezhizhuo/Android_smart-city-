@@ -15,6 +15,11 @@
         <EditText
             android:hint="搜索想要看的电影"
             android:paddingLeft="20dp"
+            android:lines="1"
+            android:id="@+id/search"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionDone"
             android:background="@drawable/movie_boder"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>

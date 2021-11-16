@@ -10,9 +10,15 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qgj.juan_05.R;
 import com.qgj.juan_05.adpater.MovieAdapter;
@@ -42,6 +48,7 @@ public class Moviesfragment extends Fragment {
         binding = FragmentMoviesfragmentBinding.inflate(getLayoutInflater());
         navController = NavHostFragment.findNavController(this);
         return binding.getRoot();
+
     }
 
     @Override
@@ -50,6 +57,31 @@ public class Moviesfragment extends Fragment {
         mViewModel = new ViewModelProvider(this).get(MoviesViewModel.class);
         initview();
         initDate();
+        //搜索框
+        initserch();
+    }
+
+    private void initserch() {
+        binding.search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                //Toast.makeText(getActivity(), ""+s.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String str = s.toString();
+                if (!str.equals("")){
+                    Toast.makeText(getActivity(), ""+s.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
 
     private void initDate() {
@@ -64,7 +96,6 @@ public class Moviesfragment extends Fragment {
             }
         });
     }
-
     private void initview() {
         binding.hotmvie.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
     }

@@ -117,7 +117,6 @@ public  class ServiceDaoImpl {
     public static OutPationModel getOutpatientAll( ) throws IOException {
         return Call(mServiceDao.getOutpatientAll());
     }
-
     //获取所有的公交路线
     public static BusLienModel getBusLienAll( ) throws IOException {
         return Call(mServiceDao.getBusLienAll());
@@ -169,6 +168,10 @@ public  class ServiceDaoImpl {
     public static CardDepartmentModel getDepartmentAll() throws IOException {
         return Call(mServiceDao.getDepartmentAll());
     }
+    ////查询类型科室
+    public static CardDepartmentModel getDepartmentAll(int type) throws IOException {
+        return Call(mServiceDao.getDepartmentAll(type));
+    }
     //查询影片信息列
     public static MovieModel getMovieAll() throws IOException {
         return Call(mServiceDao.getMovieAll());
@@ -186,6 +189,8 @@ public  class ServiceDaoImpl {
     public static MoviePlModel getMoviePlById(int id) throws IOException {
         return Call(mServiceDao.getMoviePlById(id));
     }
+
+    //节省操作
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();
     }

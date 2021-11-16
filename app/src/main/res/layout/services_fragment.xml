@@ -24,12 +24,18 @@
                 <ImageView
                     android:layout_margin="10dp"
                     android:layout_width="30dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
                     android:background="@drawable/search"
                     android:layout_height="wrap_content"/>
                 <EditText
                     android:id="@+id/search"
                     android:lines="1"
                     android:paddingLeft="0dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
                     android:background="@color/transparent"
                     android:layout_width="300dp"
                     android:hint="请输入搜索关键字"
@@ -45,32 +51,39 @@
                 android:orientation="vertical"
                 android:layout_width="120dp"
                 android:layout_height="match_parent">
-
                 <LinearLayout
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/bmfw"
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/more"
                     android:paddingLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp">
 
                     <ImageView
-                        android:src="@drawable/service_type_bianming"
+                        android:src="@drawable/service_type_more"
                         android:layout_width="25dp"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="50dp"/>
                     <TextView
-                        android:id="@+id/bmtext"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/moretext"
+                        android:text="全部服务"
                         android:paddingLeft="10dp"
                         android:textSize="14dp"
-                        android:gravity="center"
                         android:textColor="@color/black"
-                        android:text="便民服务"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp">
 
                     </TextView>
 
-
+                    <ImageView
+                        android:layout_marginLeft="140dp"
+                        android:src="@drawable/user_ico_back"
+                        android:layout_width="25dp"
+                        android:layout_height="50dp">
+                    </ImageView>
                 </LinearLayout>
+
                 <View
                      android:layout_gravity="center"
                     android:layout_width="match_parent"
@@ -154,36 +167,29 @@
                     android:background="#807D7A"
                     android:layout_height="0.5dp"/>
                 <LinearLayout
-                    android:layout_marginTop="10dp"
-
-                    android:id="@+id/more"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/bmfw"
                     android:paddingLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp">
 
                     <ImageView
-                        android:src="@drawable/service_type_more"
+                        android:src="@drawable/service_type_bianming"
                         android:layout_width="25dp"
-                        android:layout_height="50dp"/>
+                        android:layout_height="match_parent"/>
                     <TextView
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:id="@+id/moretext"
-                        android:text="全部服务"
+                        android:id="@+id/bmtext"
                         android:paddingLeft="10dp"
                         android:textSize="14dp"
+                        android:gravity="center"
                         android:textColor="@color/black"
+                        android:text="便民服务"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp">
 
                     </TextView>
 
-                    <ImageView
-                        android:layout_marginLeft="140dp"
-                        android:src="@drawable/user_ico_back"
-                        android:layout_width="25dp"
-                        android:layout_height="50dp">
-                    </ImageView>
+
                 </LinearLayout>
                 <View
                     android:layout_gravity="center"
@@ -191,6 +197,7 @@
                     android:background="#807D7A"
                     android:layout_height="0.5dp"/>
             </LinearLayout>
+
     <View
         android:layout_width="1dp"
         android:background="@color/black"

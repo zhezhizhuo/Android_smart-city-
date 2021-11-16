@@ -9,11 +9,14 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -25,6 +28,8 @@ import com.qgj.juan_05.netwok.model.BusLienModel;
 import com.qgj.juan_05.netwok.model.BusLineInfoModel;
 import com.qgj.juan_05.netwok.service.ServiceDaoImpl;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -32,6 +37,7 @@ public class SmartBusFragment extends Fragment {
 
     private SmartBusViewModel mViewModel;
     FragmentSmartBusBinding binding;
+    NavController navController;
 
     public static SmartBusFragment newInstance() {
         return new SmartBusFragment();
@@ -41,6 +47,7 @@ public class SmartBusFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = FragmentSmartBusBinding.inflate(getLayoutInflater());
+        navController = NavHostFragment.findNavController(this);
         return binding.getRoot();
 
     }
@@ -55,6 +62,7 @@ public class SmartBusFragment extends Fragment {
     }
 
     private void initData() {
+
 
 //        mViewModel.getMbuslie().observe(getViewLifecycleOwner(), new Observer<BusLienModel>() {
 //            @Override
@@ -78,7 +86,6 @@ public class SmartBusFragment extends Fragment {
                             for (BusLienModel.RowsDTO row : busLienAll.getRows()) {
                                 BusLineInfoModel busLienInfoById = ServiceDaoImpl.getBusLienInfoById(row.getId());
 //                              System.out.println(row.getId()+busLienInfoById.toString());
-
                                 List<BusLineInfoModel.RowsDTO> rows = busLienInfoById.getRows();
                                 row.mInfoModel=rows;
                             }
@@ -87,7 +94,7 @@ public class SmartBusFragment extends Fragment {
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    ServicesBusLineAdapter busLineAdapter = new ServicesBusLineAdapter(busLienAll.getRows(),getContext());
+                                    ServicesBusLineAdapter busLineAdapter = new ServicesBusLineAdapter(busLienAll.getRows(),getContext(),navController);
                                     binding .liens.setAdapter(busLineAdapter);
                                 }
                             });

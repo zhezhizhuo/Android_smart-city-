@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.qgj.juan_05.R;
@@ -64,6 +65,7 @@ public class ReservationFragment extends Fragment {
                getActivity().runOnUiThread(()->{
                    ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_expandable_list_item_1,strings.toArray());
                    binding.listview.setAdapter(arrayAdapter);
+
                });
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -78,6 +80,12 @@ public class ReservationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 navController.navigateUp();
+            }
+        });
+        binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                navController.navigate(R.id.departmentFragment);
             }
         });
     }

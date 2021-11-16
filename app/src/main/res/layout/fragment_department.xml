@@ -14,7 +14,7 @@
         android:layout_height="50dp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="50dp"
-        android:id="@+id/zhuanj"
+        android:id="@+id/type"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </FrameLayout>

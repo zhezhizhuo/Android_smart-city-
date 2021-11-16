@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.services.DateTimeFragment">
+    <TextView
+        android:background="@color/red"
+        style="@style/textcolor"
+        android:id="@+id/title"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:text="请选择乘车日期"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <DatePicker
+        android:layout_gravity="center"
+        android:id="@+id/date"
+        android:calendarTextColor="@color/white"
+        android:startYear="2020"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp">
+    </DatePicker>
+    <TextView
+        android:id="@+id/time"
+        android:layout_marginTop="10dp"
+        style="@style/textcolor"
+        android:textSize="22sp"
+        android:text="选择的日期: 2021年11月17日"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="下一步" />
+</LinearLayout>

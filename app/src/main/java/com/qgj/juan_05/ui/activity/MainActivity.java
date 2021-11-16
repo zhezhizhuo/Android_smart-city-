@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class MainActivity extends AppCompatActivity {
     final String TAG = "MainActivity";
     private ActivityMainBinding binding;
-    public static String token="";
+    public static String token="eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjdiMDhkNDkwLWQyYmItNGRkOS04ZWRlLWE0MWYyYjU1YTlhYiJ9.85kipz7e_wn3sWvvH9zyn9qwsBbbAv-cC3oDiD5uDRrKSajhfkYEN6OQ63zFrr60hSg-1ys_OD2XZmsJq2ksIA";
     public static String serverURL = "http://124.93.196.45:10001/";
 
 
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.a_main_nav_host);
         navController = navHostFragment.getNavController();
         binding.aMainBottomNav.setVisibility(View.GONE);
-
         //判断是不是第一次登录
         isfrist();
 
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         // 将底部导航绑定 Navigate
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
         getSupportActionBar().hide();
-        getSupportActionBar().hide();
+
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {

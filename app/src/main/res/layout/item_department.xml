@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:layout_margin="5dp"
+    android:layout_height="50dp">
+    <TextView
+        style="@style/textcolor"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:id="@+id/name"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="7dp"
+        android:text="2020-9-21（今天）周一，下午14:00" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginBottom="7dp"
+        android:text="21" />
+
+    <Button
+        android:id="@+id/bth"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="5dp"
+        android:text="预约"
+        android:background="@drawable/movie_bth"
+        android:layout_height="30dp"/>
+    <View
+        android:layout_marginLeft="-300dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="-3dp"
+        android:background="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

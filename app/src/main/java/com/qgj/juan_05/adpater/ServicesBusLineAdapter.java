@@ -1,6 +1,7 @@
  package com.qgj.juan_05.adpater;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.PointerIcon;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,11 +41,12 @@ public class ServicesBusLineAdapter extends RecyclerView.Adapter<ServicesBusLine
     List<BusLienModel.RowsDTO> mList;
     Context mContext;
 
-
+    NavController navController;
     ItemBuslineBinding   binding;
-    public ServicesBusLineAdapter(List<BusLienModel.RowsDTO>   list, Context context) {
+    public ServicesBusLineAdapter(List<BusLienModel.RowsDTO> list, Context context, NavController navController) {
         mList = list;
         mContext = context;
+        this.navController = navController;
     }
 
     @NonNull
@@ -111,6 +114,15 @@ public class ServicesBusLineAdapter extends RecyclerView.Adapter<ServicesBusLine
             Log.e("log",rows.toString());
             holder.binding.liest.setAdapter(new BusListview(rows,mContext));
         }
+        holder.binding.lienname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //路线的Id
+                Bundle bundle  = new Bundle();
+                bundle.putInt("id",rowsDTO.getId());
+                navController.navigate(R.id.dateTimeFragment,bundle);
+            }
+        });
         //获取根据id所有的路径
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1,strs);
 //            holder.binding.liest.setAdapter(arrayAdapter);

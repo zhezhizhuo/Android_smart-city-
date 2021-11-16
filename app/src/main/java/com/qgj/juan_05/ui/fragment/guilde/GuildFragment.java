@@ -72,7 +72,6 @@ public class GuildFragment extends AppCompatActivity {
     private void initbth() {
         DialogPortBinding inflate = DialogPortBinding.inflate(getLayoutInflater());
         binding.dork.setOnClickListener(new View.OnClickListener() {
-
                 @Override
                 public void onClick(View v) {
 

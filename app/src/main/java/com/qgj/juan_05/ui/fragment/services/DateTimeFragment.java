@@ -40,7 +40,7 @@ public class DateTimeFragment extends Fragment {
         binding.date.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                String str ="选择的日期: "+year+"年"+monthOfYear+"月"+dayOfMonth+"日";
+                String str ="选择的日期: "+year+"年"+(monthOfYear+1)+"月"+dayOfMonth+"日";
                 binding.time.setText(str);
 
             }

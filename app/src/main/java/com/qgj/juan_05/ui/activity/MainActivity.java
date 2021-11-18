@@ -12,17 +12,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ActivityMainBinding;
-import com.qgj.juan_05.ui.fragment.guilde.GuildFragment;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,30 +34,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getSupportActionBar().hide();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.a_main_nav_host);
         navController = navHostFragment.getNavController();
         binding.aMainBottomNav.setVisibility(View.GONE);
-        //判断是不是第一次登录
-        isfrist();
+
 
         //初始化导航兰
         initNav();
 
     }
-
-    private void isfrist() {
-        new Thread(()->{
-                SharedPreferences sharedPreferences = getSharedPreferences("pz",MODE_PRIVATE);
-        if (sharedPreferences.getBoolean("first",true)) {//默认是第一次进入
-            startActivity(new Intent(MainActivity.this,GuildFragment.class));
-        }else {
-        }
-        }).start();
-    }
-
     /**初始化导航
      * bar绑定
      * 将底部导航绑定 Navigate

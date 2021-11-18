@@ -17,17 +17,20 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+
         getSupportActionBar().hide();
         SharedPreferences sharedPreferences =getSharedPreferences("pz", Context.MODE_PRIVATE);
         boolean  first = sharedPreferences.getBoolean("first", true);
         if (first){
-            //不是
-             startActivity(new Intent(SplashActivity.this,GuildeActivity.class));
-        }else {
             //是
+            startActivity(new Intent(this,GuildActivity.class));
+            return;
+        }else {
+            //不是
+
         }
         init();
+        setContentView(R.layout.activity_splash);
     }
 
     private void init() {

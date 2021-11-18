@@ -1,4 +1,4 @@
-package com.qgj.juan_05.ui.fragment.guilde;
+package com.qgj.juan_05.ui.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,33 +8,25 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.qgj.juan_05.R;
+import com.qgj.juan_05.databinding.ActivityGuildBinding;
 import com.qgj.juan_05.databinding.DialogPortBinding;
-import com.qgj.juan_05.databinding.FragmentGuildBinding;
-import com.qgj.juan_05.ui.activity.MainActivity;
-import com.qgj.juan_05.util.PagerController;
 
 import org.jetbrains.annotations.NotNull;
 
 
-public class GuildFragment extends AppCompatActivity {
-    FragmentGuildBinding binding;
+public class GuildActivity extends AppCompatActivity {
+    ActivityGuildBinding binding;
 
     boolean first;
     ImageView [] imageViews;
@@ -43,7 +35,7 @@ public class GuildFragment extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //在创建之前判断是否是第一次进入app 并且计入到app的sp 文件里面去 文件名pz
-        binding = FragmentGuildBinding.inflate(getLayoutInflater());
+        binding = ActivityGuildBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         SharedPreferences sharedPreferences =getSharedPreferences("pz", Context.MODE_PRIVATE);
         first = sharedPreferences.getBoolean("first", true);
@@ -75,13 +67,13 @@ public class GuildFragment extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(GuildFragment.this);
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(GuildActivity.this);
                     alertDialog.setView(inflate.getRoot());
                     alertDialog.setTitle("网络设置");
                     alertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(GuildFragment.this, inflate.iptext.getText(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GuildActivity.this, inflate.iptext.getText(), Toast.LENGTH_SHORT).show();
                         }
                     });
                     alertDialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -102,7 +94,7 @@ public class GuildFragment extends AppCompatActivity {
                 SharedPreferences.Editor edit = sharedPreferences.edit();
                 SharedPreferences.Editor first = edit.putBoolean("first", false);
                 first.commit();
-                startActivity(new Intent(GuildFragment.this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                startActivity(new Intent(GuildActivity.this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
             }
         });
     }

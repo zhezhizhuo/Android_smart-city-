@@ -37,7 +37,6 @@ import com.qgj.juan_05.databinding.ItemDialogSerachBinding;
 import com.qgj.juan_05.databinding.ItemSeviceSeachBinding;
 import com.qgj.juan_05.databinding.ServicesFragmentBinding;
 import com.qgj.juan_05.netwok.model.HomeServiceModel;
-import com.qgj.juan_05.ui.fragment.guilde.GuildFragment;
 
 import java.util.ArrayList;
 import java.util.List;

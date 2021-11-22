@@ -15,7 +15,6 @@ import com.qgj.juan_05.databinding.FragmentSuccessBinding;
 public class SuccessFragment extends Fragment {
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

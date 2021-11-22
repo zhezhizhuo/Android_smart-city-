@@ -18,9 +18,6 @@ public class PagerController {
             case "ss/index":
                 controller.navigate(R.id.wearther_fragment,new Bundle());
                 break;
-            case "park/index":
-            //    controller.navigate(R.id.park_Fragment,new Bundle());
-                break;
             case "bus_query/custom_shuttle":
                     controller.navigate(R.id.smartBusFragment,new Bundle());
                 break;
@@ -42,7 +39,21 @@ public class PagerController {
             case "traffic/index":
                 controller.navigate(R.id.targetedFragment,new Bundle());
                 break;
-
+            case "house/index":
+                controller.navigate(R.id.houseFragment,new Bundle());
+                break;
+            case "job/index":
+                controller.navigate(R.id.targetedFragment,new Bundle());
+                break;
+            case "takeout/index":
+                controller.navigate(R.id.tackoutFragment,new Bundle());
+                break;
+            case "living_expenses/index":
+                controller.navigate(R.id.targetedFragment,new Bundle());
+                break;
+            case "park/index":
+                controller.navigate(R.id.targetedFragment,new Bundle());
+                break;
         }
     }
 }

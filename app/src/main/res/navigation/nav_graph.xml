@@ -162,4 +162,19 @@
         android:name="com.qgj.juan_05.ui.fragment.services.NewsViewPagerFragment"
         android:label="news_view_pager_fragment"
         tools:layout="@layout/news_view_pager_fragment" />
+    <fragment
+        android:id="@+id/houseFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.HouseFragment"
+        android:label="找房子"
+        tools:layout="@layout/house_fragment" />
+    <fragment
+        android:id="@+id/tackoutFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.TackoutFragment"
+        android:label="外卖订餐"
+        tools:layout="@layout/tackout_fragment" />
+    <fragment
+        android:id="@+id/joderFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.JoderFragment"
+        android:label="找工作"
+        tools:layout="@layout/joder_fragment" />
 </navigation>

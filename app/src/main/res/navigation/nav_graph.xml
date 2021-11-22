@@ -157,4 +157,9 @@
         android:name="com.qgj.juan_05.ui.fragment.services.DateTimeFragment"
         android:label="乘车日期"
         tools:layout="@layout/fragment_date_time" />
+    <fragment
+        android:id="@+id/newsViewPagerFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.NewsViewPagerFragment"
+        android:label="news_view_pager_fragment"
+        tools:layout="@layout/news_view_pager_fragment" />
 </navigation>

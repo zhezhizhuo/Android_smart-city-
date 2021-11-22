@@ -190,7 +190,7 @@ public  class ServiceDaoImpl {
         return Call(mServiceDao.getMoviePlById(id));
     }
 
-    //节省操作
+    //泛型  减少代码量
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();
     }

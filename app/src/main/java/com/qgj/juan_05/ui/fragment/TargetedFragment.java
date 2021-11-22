@@ -13,19 +13,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.qgj.juan_05.R;
+import com.qgj.juan_05.databinding.TargetedFragmentBinding;
 
 public class TargetedFragment extends Fragment {
 
     private TargetedViewModel mViewModel;
 
+
+    TargetedFragmentBinding binding;
+
     public static TargetedFragment newInstance() {
         return new TargetedFragment();
     }
-
+    //极其复杂
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.targeted_fragment, container, false);
+        //代码怎么写
+        binding = TargetedFragmentBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
     }
 
     @Override

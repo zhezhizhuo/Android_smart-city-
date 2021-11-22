@@ -24,7 +24,7 @@ import com.qgj.juan_05.databinding.DialogPortBinding;
 
 import org.jetbrains.annotations.NotNull;
 
-
+@SuppressWarnings("all")
 public class GuildActivity extends AppCompatActivity {
     ActivityGuildBinding binding;
 

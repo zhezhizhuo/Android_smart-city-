@@ -39,6 +39,9 @@ public class PagerController {
             case "违规查询":
                 controller.navigate(R.id.wearther_fragment,new Bundle());
                 break;
+            case "traffic/index":
+                controller.navigate(R.id.targetedFragment,new Bundle());
+                break;
 
         }
     }

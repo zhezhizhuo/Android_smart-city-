@@ -18,7 +18,7 @@ import com.qgj.juan_05.databinding.ItemPagerBinding;
 import com.qgj.juan_05.util.SizeUtils;
 
 import org.jetbrains.annotations.NotNull;
-
+@SuppressWarnings("all")
 public class BannerView extends LinearLayout {
     private PagerAdapter adapter;
 
@@ -51,7 +51,7 @@ public class BannerView extends LinearLayout {
 
         @Override
         public boolean isViewFromObject(@NonNull @NotNull View view, @NonNull @NotNull Object object) {
-            return view ==object;
+            return view == object;
         }
 
         @Override

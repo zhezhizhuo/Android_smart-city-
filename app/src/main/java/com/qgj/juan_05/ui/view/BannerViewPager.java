@@ -35,11 +35,11 @@ public class BannerViewPager extends ViewPager {
     private void startLooper() {
        mhander.postDelayed(looper,1000);
     }
-    private  Runnable looper = new Runnable() {
+    private  final Runnable looper = new Runnable() {
         @Override
         public void run() {
             int time = getCurrentItem();
-            time++;
+            time ++;
             setCurrentItem(time);
             postDelayed(this,3000);
         }

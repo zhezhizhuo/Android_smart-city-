@@ -27,15 +27,19 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/transparent" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/newsinfo"
-                android:layout_marginBottom="50dp"
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/newsinfo"-->
+<!--                android:layout_marginBottom="50dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"/>-->
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </RelativeLayout>
+                android:layout_height="500dp"/>
+<!--        </RelativeLayout>-->
     </LinearLayout>
     </ScrollView>
 </FrameLayout>

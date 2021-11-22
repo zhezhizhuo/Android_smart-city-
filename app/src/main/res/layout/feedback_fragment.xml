@@ -6,6 +6,7 @@
     android:background="#E6E6E6"
     tools:context=".ui.fragment.user.FeedbackFragment">
     <LinearLayout
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
@@ -26,15 +27,27 @@
             android:layout_marginBottom="10dp"
             android:layout_height="2dp"></View>
 
-        <EditText
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:id="@+id/yjtext"
-            android:gravity="top"
-            android:background="@drawable/yj_bg_select"
-            android:hint="请输入意见内容"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="300dp">
+          <EditText
+              android:paddingTop="10dp"
+              android:paddingLeft="20dp"
+              android:id="@+id/yjtext"
+              android:gravity="top"
+              android:background="@drawable/yj_bg_select"
+              android:hint="请输入意见内容"
+              android:layout_width="match_parent"
+              android:layout_height="300dp" />
+          <TextView
+              android:layout_alignParentRight="true"
+              android:layout_alignParentBottom="true"
+              android:layout_width="wrap_content"
+              android:text="150字内"
+              android:layout_marginBottom="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_height="wrap_content"/>
+      </RelativeLayout>
 
         <Button
             android:layout_marginTop="20dp"
@@ -44,13 +57,7 @@
             android:background="@drawable/user_bg_center"
             android:layout_width="match_parent"
             android:layout_height="50dp">
-
         </Button>
-        <TextView
-            android:layout_width="match_parent"
-            android:id="@+id/text"
-            android:text="1"
-            android:textSize="50dp"
-            android:layout_height="match_parent"/>
+
     </LinearLayout>
 </FrameLayout>

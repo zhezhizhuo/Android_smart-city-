@@ -18,16 +18,16 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().hide();
+        if (getSupportActionBar()!=null) {
+            getSupportActionBar().hide();
+        }
+
         SharedPreferences sharedPreferences =getSharedPreferences("pz", Context.MODE_PRIVATE);
         boolean  first = sharedPreferences.getBoolean("first", true);
         if (first){
             //是
             startActivity(new Intent(this,GuildActivity.class));
             return;
-        }else {
-            //不是
-
         }
         init();
         setContentView(R.layout.activity_splash);
@@ -35,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void init() {
         Timer timer=new Timer();
-        //timertask实现runnable接口,TimerTask类表示一个在指定时间内执行的task
+        //timer task 实现runnable接口,TimerTask类表示一个在指定时间内执行的task
         TimerTask task=new TimerTask() {
             @Override
             public void run() {

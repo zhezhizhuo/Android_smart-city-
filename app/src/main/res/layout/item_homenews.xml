@@ -3,7 +3,11 @@
     android:layout_height="130dp"
     android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        -->
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_weight="2.4"

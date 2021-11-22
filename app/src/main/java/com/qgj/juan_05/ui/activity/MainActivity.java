@@ -1,8 +1,6 @@
 package com.qgj.juan_05.ui.activity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
@@ -21,11 +19,11 @@ import com.qgj.juan_05.R;
 import com.qgj.juan_05.databinding.ActivityMainBinding;
 
 import org.jetbrains.annotations.NotNull;
-
+@SuppressWarnings("all")
 public class MainActivity extends AppCompatActivity {
     final String TAG = "MainActivity";
     private ActivityMainBinding binding;
-    public static String token="eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjdiMDhkNDkwLWQyYmItNGRkOS04ZWRlLWE0MWYyYjU1YTlhYiJ9.85kipz7e_wn3sWvvH9zyn9qwsBbbAv-cC3oDiD5uDRrKSajhfkYEN6OQ63zFrr60hSg-1ys_OD2XZmsJq2ksIA";
+    public static String token="";
     public static String serverURL = "http://124.93.196.45:10001/";
 
 

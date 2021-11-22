@@ -1,24 +1,15 @@
 package com.qgj.juan_05.adpater;
-
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.qgj.juan_05.databinding.ItemListviewBinding;
-import com.qgj.juan_05.netwok.model.BusLienModel;
 import com.qgj.juan_05.netwok.model.BusLineInfoModel;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-
+@SuppressWarnings("all")
 public class BusListview extends RecyclerView.Adapter<BusListview.ViewHolder> {
 
     List<BusLineInfoModel.RowsDTO> mLineInfoModels;
@@ -53,7 +44,7 @@ public class BusListview extends RecyclerView.Adapter<BusListview.ViewHolder> {
         if (position==0){
             holder.binding.text.setText("起始站:  "+rowsDTO.getName());
         }else {
-            holder.binding.text.setText("            "+rowsDTO.getName());
+            holder.binding.text.setText("              "+rowsDTO.getName());
         }
         if (position==mLineInfoModels.size()-1)
             holder.binding.text.setText("终点站:  "+rowsDTO.getName());

@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.TargetedFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
 
-    <TextView
+        android:layout_height="100dp">
+
+    </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_alignParentTop="true"
+        android:id="@+id/targetedFragment_mianview"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="22" />
-
-</FrameLayout>
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_tar" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/targetedFragment_btn_nav"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:rotation="0"
+        app:itemIconTint="@drawable/ic_selector_nav_colors"
+        app:itemTextColor="@drawable/ic_selector_nav_colors"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/botton_item" />
+</RelativeLayout>

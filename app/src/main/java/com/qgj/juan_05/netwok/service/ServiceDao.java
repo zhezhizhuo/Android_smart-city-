@@ -34,6 +34,12 @@ public interface ServiceDao {
     // 获取广告
     @GET("prod-api/api/park/rotation/list")
     Call<AbnnerModel> getBannerImg();
+    //外卖的广告
+    @GET("/prod-api/api/takeout/rotation/list")
+    Call<AbnnerModel> getTackOut();
+    // 店家相关接
+    @GET("/prod-api/api/takeout/seller/list")
+    Call<TackOutModel> gethotel();
     //意见反馈的信息
     @POST("/prod-api/api/common/feedback")
     Call<DataModel> sendFeedBack(@Header("Authorization") String Authorization,@Body FeedBackModel model);

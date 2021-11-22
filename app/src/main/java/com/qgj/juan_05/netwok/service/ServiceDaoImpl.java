@@ -27,6 +27,7 @@ import com.qgj.juan_05.netwok.model.NewsInfoModel;
 import com.qgj.juan_05.netwok.model.NewsInfoplModel;
 import com.qgj.juan_05.netwok.model.OutAbnnerModel;
 import com.qgj.juan_05.netwok.model.OutPationModel;
+import com.qgj.juan_05.netwok.model.TackOutModel;
 import com.qgj.juan_05.netwok.model.UpPassWordModel;
 import com.qgj.juan_05.netwok.model.UpUserinfoModel;
 import com.qgj.juan_05.netwok.model.UserInfoModel;
@@ -76,9 +77,18 @@ public  class ServiceDaoImpl {
     public static AbnnerModel getBannerType(String type) throws IOException {
         return Call(mServiceDao.getBannerType(type));
     }
+    //// 店家相关接
+
+    public static TackOutModel gethotel() throws IOException {
+        return Call(mServiceDao.gethotel());
+    }
+
     //新闻轮播图
     public static AbnnerModel getBannerImg() throws IOException {
         return Call(mServiceDao.getBannerImg());
+    }
+    public static AbnnerModel getTackOut() throws IOException {
+        return Call(mServiceDao.getTackOut());
     }
     //所有的服务
     public static HomeServiceModel getAllService() throws IOException {
@@ -189,7 +199,7 @@ public  class ServiceDaoImpl {
     public static MoviePlModel getMoviePlById(int id) throws IOException {
         return Call(mServiceDao.getMoviePlById(id));
     }
-
+    //
     //泛型  减少代码量
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();

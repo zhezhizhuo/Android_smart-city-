@@ -1,0 +1,145 @@
+[33mcommit 9e6b537bb587a66467428563c24d448cf42fc571[m[33m ([m[1;36mHEAD -> [m[1;32mtest[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 16 19:29:35 2021 +0800
+
+    Good good
+
+[33mcommit 4a94262fbcf0b40d14d36e853f9d9a0d2c1a0761[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Sun Nov 14 20:47:51 2021 +0800
+
+    修改代码
+
+[33mcommit 5d6ad4c9920cc240c3050e1d28ab9fe6a365b9e8[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Sat Nov 13 10:53:24 2021 +0800
+
+    11
+
+[33mcommit 3fd9aa6a8e01a58cbd19aed6b12a0448b98f05ef[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Fri Nov 12 08:05:33 2021 +0800
+
+    播放预告功能
+
+[33mcommit 9c824a347d85f1b9293f09a74c5cc2cc58ccad14[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Thu Nov 11 19:28:21 2021 +0800
+
+    电影 功能
+
+[33mcommit 3c1e314fd7dc2dd8e9a3ad6fbf49696a869f456a[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Thu Nov 11 11:44:40 2021 +0800
+
+    开屏 1 秒
+
+[33mcommit 9bf765d1e838076f95a11a268d58368701e50072[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Wed Nov 10 22:52:20 2021 +0800
+
+    预约优化
+
+[33mcommit 2eb6ae47f08261f849ea8ea9df4c0448cdc5c2c2[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Wed Nov 10 22:51:03 2021 +0800
+
+    预约优化
+
+[33mcommit 86d0e50603800769116df42087732de0efc8eadd[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Wed Nov 10 14:52:47 2021 +0800
+
+    预约优化
+
+[33mcommit 5f4c61a1b80925a86fb22182ab2eb33000e57971[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Wed Nov 10 14:25:27 2021 +0800
+
+    智慧巴士 ok
+
+[33mcommit 02d5fa04ec3c27e8a60c02626f03c0e7737be90c[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 9 20:41:38 2021 +0800
+
+    预约就诊
+
+[33mcommit 50d091a87dd774ecbab6b0c3f32f3efc1af54121[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 9 18:53:28 2021 +0800
+
+    修改代码
+
+[33mcommit ebd93917992a8cce1d20257a906aeb95011ce6a5[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 9 15:29:00 2021 +0800
+
+    引导页面 + 修改代码Bug
+
+[33mcommit fecd3703e7ebdbb4d60fef2b1834c311d6ea8c44[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 9 09:08:18 2021 +0800
+
+    修改bug
+
+[33mcommit 3c1cd5d4eb07aace0fdc507354a6e2e8f654d7a7[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Tue Nov 9 08:37:43 2021 +0800
+
+    修改bug
+
+[33mcommit a9f0efbda093db2af6578fb8101a6f0d222211ea[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 20:57:33 2021 +0800
+
+    APK打包
+
+[33mcommit 0a40d52b968d1c9869ba7a2a4802946c89605544[m
+Merge: c28acf8 7c1c595
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 20:42:17 2021 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit c28acf82fe3df359cc7d7e13386976b0afe1f754[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 20:42:06 2021 +0800
+
+    更新
+
+[33mcommit 7c1c59593771ac61287addcd41154e1100d1e5d0[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:50:00 2021 +0800
+
+    修改导航工具3
+
+[33mcommit 974589690de357b7a542f9626b79251e218f1680[m
+Merge: cfa90f1 3dcd118
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:49:24 2021 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit cfa90f172fc2c8c0698c39e786eca6224a4fae45[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:49:13 2021 +0800
+
+    修改导航工具2
+
+[33mcommit 3dcd118e9a2ad5191fa7a2dd481715472dfebe65[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:48:08 2021 +0800
+
+    修改导航工具类
+
+[33mcommit f543d25f1fb24161b29d05ea0aa1b1bb15f86738[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:47:58 2021 +0800
+
+    修改导航工具类
+
+[33mcommit 27c316f62b08d363511fb1fc92ba8e66dfec9945[m
+Author: zhizhuo <2455693921@qq.com>
+Date:   Mon Nov 8 15:39:50 2021 +0800
+
+    初始化项目

@@ -152,4 +152,11 @@ public interface ServiceDao {
     //房源
     @GET("/prod-api/api/house/housing/list")
     Call<HouseModel> getHouseAll();
+    //外卖分类
+    @GET("/prod-api/api/takeout/theme/list")
+    Call<WaiMaiModel> getWaiMaiFenLei();
+    //外卖列表
+    //根据分类Id查询外卖列表
+    @GET("/prod-api/api/takeout/seller/list")
+    Call<WaiMai2Model> getWaiMaiInfoAll(@Query("themeId") int id);
 }

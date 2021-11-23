@@ -3,17 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/jianbian_bg"
     tools:context=".ui.fragment.services.HouseFragment">
 
     <TextView
         android:gravity="left"
+        android:padding="10dp"
         android:paddingLeft="20dp"
         style="@style/textcolor"
+        android:background="@color/star_bg"
         android:text="附近房源"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:id="@+id/houses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

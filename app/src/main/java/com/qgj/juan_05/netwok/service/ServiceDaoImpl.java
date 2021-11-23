@@ -33,6 +33,8 @@ import com.qgj.juan_05.netwok.model.TackOutModel;
 import com.qgj.juan_05.netwok.model.UpPassWordModel;
 import com.qgj.juan_05.netwok.model.UpUserinfoModel;
 import com.qgj.juan_05.netwok.model.UserInfoModel;
+import com.qgj.juan_05.netwok.model.WaiMai2Model;
+import com.qgj.juan_05.netwok.model.WaiMaiModel;
 import com.qgj.juan_05.netwok.model.WearthInfoModel;
 import com.qgj.juan_05.netwok.model.WeartherModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
@@ -213,7 +215,15 @@ public  class ServiceDaoImpl {
     public static HouseModel getHouseAll() throws IOException {
         return Call(mServiceDao.getHouseAll());
     }
-    //
+    //外卖分类
+    public static WaiMaiModel getWaiMaiFenLei() throws IOException {
+        return Call(mServiceDao.getWaiMaiFenLei());
+    }
+    //外卖列表
+    //根据分类Id查询外卖列表
+    public static WaiMai2Model getWaiMaiInfoAll(int id) throws IOException {
+        return Call(mServiceDao.getWaiMaiInfoAll(id));
+    }
     //泛型  减少代码量
     public static <T> T Call(Call<T> call) throws IOException {
         return call.execute().body();

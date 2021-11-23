@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.qgj.juan_05.databinding.ItemHouseBinding;
-import com.qgj.juan_05.databinding.ItemMovieplBinding;
 import com.qgj.juan_05.netwok.model.HouseModel;
 import com.qgj.juan_05.ui.activity.MainActivity;
 
@@ -45,6 +44,8 @@ public void onBindViewHolder(@NonNull @NotNull HouseAdapterextends.ViewHolder ho
     holder.binding.sourceName.setText(rowsDTO.getSourceName());
     //电话
     holder.binding.tel.setText("电话:"+rowsDTO.getTel());
+    //类型
+    holder.binding.houseType.setText(rowsDTO.getHouseType());
     //简介
    // holder.binding.description.setText(rowsDTO.getDescription());
     //价格

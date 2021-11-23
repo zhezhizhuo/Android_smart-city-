@@ -56,7 +56,7 @@ public class ServicesActivityAdapter  extends RecyclerView.Adapter<ServicesActiv
         holder.binding.newsTitlt.setText(dataDTO.getName());
         holder.binding.newsContent.setText(TextUtil.FormatString(dataDTO.getContent()));
         //阅读数量
-        holder.binding.read.setText("是否推荐:  "+(dataDTO.getRecommend().equals("Y")== true ? "是":"不是"));
+        holder.binding.read.setText((dataDTO.getRecommend().equals("Y")== true ? "推荐":"不推荐"));
         //加载图片
         Glide.with(mContext)
                 .load(MainActivity.serverURL + dataDTO.getImgUrl())

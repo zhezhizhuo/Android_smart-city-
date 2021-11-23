@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_margin="5dp"
+    android:padding="4dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/houds_radios"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgUrl"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_margin="5dp"
+        android:scaleType="fitXY" />
+    <TextView
+        android:id="@+id/sourceName"
+        android:lines="1"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+       android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:text="尊宝比萨"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<!--    <TextView-->
+<!--        android:textColor="@color/red"-->
+<!--        android:gravity="center"-->
+<!--        android:text="价格: 28300/㎡"-->
+<!--        android:id="@+id/price"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+    <TextView
+        android:id="@+id/introduction"
+        android:text="纯手工牛肉汉堡"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/saleQuantity"
+            android:text="销售量 379"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/avgCost"
+            android:text="  均价 22"
+            android:layout_height="wrap_content"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:id="@+id/deliveryTime"-->
+<!--            android:text="   22min"-->
+<!--            android:layout_height="wrap_content"/>-->
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="4dp  "
+        android:id="@+id/address"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="地址: 辽宁省大连市高新技术园区软景中心南门"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/distance"
+            android:text="距离: 620.00 M"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/red"
+            android:id="@+id/score"
+
+            android:text="评分: 4.9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--    <TextView-->
+    <!--        android:id="@+id/description"-->
+    <!--        android:textSize="10dp"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:textColor="@color/teal_700"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:text="第五郡经典一室小房好楼层自住保持非常好小区一共36栋楼,8栋小高,28栋洋,小区绿树"-->
+    <!--        android:layout_height="wrap_content"/>-->
+
+</LinearLayout>

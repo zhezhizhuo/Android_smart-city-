@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.services.TackoutFragment">
     <LinearLayout
         android:orientation="vertical"
@@ -36,10 +37,15 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
-        <ImageView
-            android:layout_marginTop="200dp"
-            android:id="@+id/demo"
+            android:layout_height="180dp"/>
+   <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+       app:tabMode="scrollable"
+       app:tabIndicatorColor="@color/pick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/waimaiinfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

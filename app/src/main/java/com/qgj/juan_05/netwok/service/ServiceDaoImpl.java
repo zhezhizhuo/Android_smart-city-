@@ -19,6 +19,7 @@ import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.netwok.model.HomeNewsModel;
 import com.qgj.juan_05.netwok.model.HomeServiceModel;
 import com.qgj.juan_05.netwok.model.HotMovieModel;
+import com.qgj.juan_05.netwok.model.HouseModel;
 import com.qgj.juan_05.netwok.model.LifeModel;
 import com.qgj.juan_05.netwok.model.LoginModel;
 import com.qgj.juan_05.netwok.model.MovieModel;
@@ -207,6 +208,10 @@ public  class ServiceDaoImpl {
     //生活服务的图
     public static AbnnerModel getLifeBanner() throws IOException {
         return Call(mServiceDao.getLifeBanner());
+    }
+    //房源
+    public static HouseModel getHouseAll() throws IOException {
+        return Call(mServiceDao.getHouseAll());
     }
     //
     //泛型  减少代码量

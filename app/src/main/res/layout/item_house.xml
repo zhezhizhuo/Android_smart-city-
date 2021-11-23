@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_margin="5dp"
+    android:padding="4dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/movie_boder"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pic"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+        <TextView
+            android:id="@+id/sourceName"
+            android:lines="2"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:text="西安路08年框架电梯房 70年LOFT 一室一厅封闭小区"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tel"
+                android:text="电话: 18546474547"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/red"
+                android:id="@+id/houseType"
+                android:paddingLeft="10dp"
+                android:text="二手"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<!--    <TextView-->
+<!--        android:id="@+id/description"-->
+<!--        android:textSize="10dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:textColor="@color/teal_700"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="第五郡经典一室小房好楼层自住保持非常好小区一共36栋楼,8栋小高,28栋洋,小区绿树"-->
+<!--        android:layout_height="wrap_content"/>-->
+     <TextView
+         android:textColor="@color/red"
+         android:gravity="center"
+         android:text="价格: 28300/㎡"
+         android:id="@+id/price"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+</LinearLayout>

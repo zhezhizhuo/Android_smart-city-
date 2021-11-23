@@ -6,8 +6,15 @@
     tools:context=".ui.fragment.services.HouseFragment">
 
     <TextView
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        style="@style/textcolor"
+        android:text="附近房源"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
-
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/houses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </FrameLayout>

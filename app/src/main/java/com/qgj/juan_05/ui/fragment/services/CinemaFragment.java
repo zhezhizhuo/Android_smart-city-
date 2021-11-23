@@ -25,11 +25,10 @@ public class CinemaFragment extends Fragment {
 
     private CinemaViewModel mViewModel;
     CinemaFragmentBinding binding;
-    int id;
+    private   int id;
     public static CinemaFragment newInstance() {
         return new CinemaFragment();
     }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

@@ -149,4 +149,7 @@ public interface ServiceDao {
     //生活缴费轮播图
     @GET("/prod-api/api/living/rotation/list")
     Call<AbnnerModel> getLifeBanner();
+    //房源
+    @GET("/prod-api/api/house/housing/list")
+    Call<HouseModel> getHouseAll();
 }

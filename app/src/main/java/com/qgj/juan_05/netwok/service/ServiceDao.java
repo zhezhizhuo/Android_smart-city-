@@ -143,4 +143,10 @@ public interface ServiceDao {
     //根据id查看所有的评论
     @GET("/prod-api/api/movie/film/comment/list")
     Call<MoviePlModel> getMoviePlById(@Query("movieId") int id);
+    //生活服务的图
+    @GET("/prod-api/api/living/category/list")
+    Call<LifeModel> getLifeAll();
+    //生活缴费轮播图
+    @GET("/prod-api/api/living/rotation/list")
+    Call<AbnnerModel> getLifeBanner();
 }

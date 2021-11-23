@@ -177,4 +177,9 @@
         android:name="com.qgj.juan_05.ui.fragment.services.JoderFragment"
         android:label="找工作"
         tools:layout="@layout/joder_fragment" />
+    <fragment
+        android:id="@+id/lifemoneyFragment"
+        android:name="com.qgj.juan_05.ui.fragment.services.LifemoneyFragment"
+        android:label="生活缴费"
+        tools:layout="@layout/lifemoney_fragment" />
 </navigation>

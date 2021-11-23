@@ -19,6 +19,7 @@ import com.qgj.juan_05.netwok.model.HomeNewAllModel;
 import com.qgj.juan_05.netwok.model.HomeNewsModel;
 import com.qgj.juan_05.netwok.model.HomeServiceModel;
 import com.qgj.juan_05.netwok.model.HotMovieModel;
+import com.qgj.juan_05.netwok.model.LifeModel;
 import com.qgj.juan_05.netwok.model.LoginModel;
 import com.qgj.juan_05.netwok.model.MovieModel;
 import com.qgj.juan_05.netwok.model.MoviePlModel;
@@ -198,6 +199,14 @@ public  class ServiceDaoImpl {
     //查询影片信息pl
     public static MoviePlModel getMoviePlById(int id) throws IOException {
         return Call(mServiceDao.getMoviePlById(id));
+    }
+    //生活服务的图
+    public static LifeModel getLifeAll() throws IOException {
+        return Call(mServiceDao.getLifeAll());
+    }
+    //生活服务的图
+    public static AbnnerModel getLifeBanner() throws IOException {
+        return Call(mServiceDao.getLifeBanner());
     }
     //
     //泛型  减少代码量

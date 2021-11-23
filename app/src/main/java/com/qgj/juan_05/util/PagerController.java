@@ -49,7 +49,7 @@ public class PagerController {
                 controller.navigate(R.id.tackoutFragment,new Bundle());
                 break;
             case "living_expenses/index":
-                controller.navigate(R.id.targetedFragment,new Bundle());
+                controller.navigate(R.id.lifemoneyFragment,new Bundle());
                 break;
             case "park/index":
                 controller.navigate(R.id.targetedFragment,new Bundle());

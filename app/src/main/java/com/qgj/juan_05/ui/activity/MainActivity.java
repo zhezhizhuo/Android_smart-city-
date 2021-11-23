@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.a_main_nav_host);
         navController = navHostFragment.getNavController();
         binding.aMainBottomNav.setVisibility(View.GONE);
-
-
         //初始化导航兰
         initNav();
 

@@ -112,8 +112,9 @@ public class MovieInfoFragment extends Fragment {
         binding.bofang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(MovieInfoFragment.this).navigate(R.id.trailerFragment,new Bundle());
-
+                Bundle bundle = new Bundle();
+                bundle.putInt("id",id);
+                NavHostFragment.findNavController(MovieInfoFragment.this).navigate(R.id.trailerFragment,bundle);
             }
         });
         //跳转

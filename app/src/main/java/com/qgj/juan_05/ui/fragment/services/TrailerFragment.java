@@ -32,8 +32,10 @@ public class TrailerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = FragmentTrailerBinding.inflate(getLayoutInflater());
-        Uri uri = Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
-        binding.videoView.setVideoURI(uri);
+       // Uri uri = Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+        
+
+        setVideo();
         //创建MediaController对象
         MediaController mediaController = new MediaController(getContext());
         //VideoView与MediaController建立关联
@@ -41,6 +43,11 @@ public class TrailerFragment extends Fragment {
         //让VideoView获取焦点
         binding.videoView.requestFocus();
         binding.videoView.start();
+    }
+
+    private void setVideo() {
+        //拿到Id然后获取预包
+//        binding.videoView.setVideoURI(uri);
     }
 
     @Override

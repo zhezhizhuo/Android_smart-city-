@@ -171,4 +171,9 @@ public interface ServiceDao {
     @POST("/prod-api/api/movie/film/comment")
     @Headers( value = "Content-Type:application/json")
     Call<DataModel> sendMoviePl(@Body SendMoviePlModel moviePlModel,@Header("Authorization") String token);
+    //电影预告
+    //....//
+    //开屏广告
+    @GET("/prod-api/api/rotation/list")
+    Call<AbnnerModel> getOpenBanner(@Query("pageNum")int paget,@Query("pageSize") int size);
 }

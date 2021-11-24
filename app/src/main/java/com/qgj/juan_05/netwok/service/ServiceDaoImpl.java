@@ -230,6 +230,11 @@ public  class ServiceDaoImpl {
     public static AbnnerModel getMovieBanner() throws IOException {
         return Call(mServiceDao.getMovieBanner());
     }
+
+    //开屏广告
+    public static AbnnerModel getOpenBanner(int pager,int size) throws IOException {
+        return Call(mServiceDao.getOpenBanner(pager,size));
+    }
     ////影院
     public static CinameModel getCinema() throws IOException {
         return Call(mServiceDao.getCinema(5,20));

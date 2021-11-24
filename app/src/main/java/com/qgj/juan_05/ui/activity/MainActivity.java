@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 public class MainActivity extends AppCompatActivity {
     final String TAG = "MainActivity";
     private ActivityMainBinding binding;
-    public static String token="";
+    public static String token="eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjYyNWQ5ZmZlLWE5ZTgtNDc0OS04NTk3LTg2NTI3OTNlM2NmZiJ9.BjmTp1NB2wKLtPrwP5qP8IgC8A89cgCmk8Ogg5K9lyyJr8m_80qk_xfNUrfrTh4cx8dn1If27sNPB9-fo2ctWw";
     public static String serverURL = "http://124.93.196.45:10001/";
 
 

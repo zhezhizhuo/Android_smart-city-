@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/moview_item"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--        -->
+    <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_margin="8dp"
+            android:id="@+id/img"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+
+        android:orientation="vertical"
+        android:layout_weight="2.4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:lines="1"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:id="@+id/name"
+            android:text="万达影城"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:maxWidth="150dp"
+                android:text="高新园区黄浦路500号万达广场4层"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_toLeftOf="@+id/distance"
+
+                android:gravity="left"
+                android:padding="5dp"
+                android:paddingRight="5dp"
+                android:text="距离:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_alignParentRight="true"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:textColor="@color/red"
+                android:paddingRight="5dp"
+                android:id="@+id/distance"
+                android:text="3800米"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+            <TextView
+                android:paddingLeft="20dp"
+                android:id="@+id/city"
+                android:text="辽宁省 大连市 沙河口区"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

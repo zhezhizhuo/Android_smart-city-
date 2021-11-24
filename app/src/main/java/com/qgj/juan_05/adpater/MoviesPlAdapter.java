@@ -42,7 +42,7 @@ public class MoviesPlAdapter extends RecyclerView.Adapter<MoviesPlAdapter.ViewHo
              //日期
             holder.binding.datetime.setText(rowsDTO.getCommentDate());
             //内容
-            holder.binding.content.setText(TextUtil.FormatString(rowsDTO.getContent()));
+            holder.binding.content.setText(rowsDTO.getContent());
             //评星
             holder.binding.lear.setRating(rowsDTO.getScore());
             //用户名

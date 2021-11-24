@@ -13,6 +13,7 @@ import com.qgj.juan_05.netwok.model.BusLienModel;
 import com.qgj.juan_05.netwok.model.BusLineInfoModel;
 import com.qgj.juan_05.netwok.model.CardDepartmentModel;
 import com.qgj.juan_05.netwok.model.CardInfoModel;
+import com.qgj.juan_05.netwok.model.CinameModel;
 import com.qgj.juan_05.netwok.model.DataModel;
 import com.qgj.juan_05.netwok.model.FeedBackModel;
 import com.qgj.juan_05.netwok.model.HomeNewAllModel;
@@ -29,6 +30,7 @@ import com.qgj.juan_05.netwok.model.NewsInfoModel;
 import com.qgj.juan_05.netwok.model.NewsInfoplModel;
 import com.qgj.juan_05.netwok.model.OutAbnnerModel;
 import com.qgj.juan_05.netwok.model.OutPationModel;
+import com.qgj.juan_05.netwok.model.SendMoviePlModel;
 import com.qgj.juan_05.netwok.model.TackOutModel;
 import com.qgj.juan_05.netwok.model.UpPassWordModel;
 import com.qgj.juan_05.netwok.model.UpUserinfoModel;
@@ -223,6 +225,18 @@ public  class ServiceDaoImpl {
     //根据分类Id查询外卖列表
     public static WaiMai2Model getWaiMaiInfoAll(int id) throws IOException {
         return Call(mServiceDao.getWaiMaiInfoAll(id));
+    }
+    //电影广告
+    public static AbnnerModel getMovieBanner() throws IOException {
+        return Call(mServiceDao.getMovieBanner());
+    }
+    ////影院
+    public static CinameModel getCinema() throws IOException {
+        return Call(mServiceDao.getCinema(5,20));
+    }
+    //fa表评论
+    public static DataModel sendMoviePl(SendMoviePlModel sendMoviePlModel,String token) throws IOException {
+        return Call(mServiceDao.sendMoviePl(sendMoviePlModel,token));
     }
     //泛型  减少代码量
     public static <T> T Call(Call<T> call) throws IOException {

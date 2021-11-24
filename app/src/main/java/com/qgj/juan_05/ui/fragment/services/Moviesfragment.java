@@ -17,13 +17,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.qgj.juan_05.R;
+import com.qgj.juan_05.adpater.CinameAdapter;
 import com.qgj.juan_05.adpater.MovieAdapter;
 import com.qgj.juan_05.databinding.FragmentMoviesfragmentBinding;
+import com.qgj.juan_05.netwok.model.AbnnerModel;
+import com.qgj.juan_05.netwok.model.CinameModel;
 import com.qgj.juan_05.netwok.model.MovieModel;
+import com.qgj.juan_05.ui.activity.MainActivity;
+import com.qgj.juan_05.ui.view.BannerView;
 
 import java.util.List;
 
@@ -59,6 +66,50 @@ public class Moviesfragment extends Fragment {
         initDate();
         //搜索框
         initserch();
+        //轮播图
+        loadBanner();
+        //getCinema 影院
+        loadCinema();
+    }
+
+    private void loadCinema() {
+        mViewModel.getCinamemodel().observe(getViewLifecycleOwner(), new Observer<CinameModel>() {
+            @Override
+            public void onChanged(CinameModel cinameModel) {
+                CinameAdapter adapter = new CinameAdapter(cinameModel.getRows(),getActivity(),navController);
+                binding.all.setText(" 全部"+cinameModel.getTotal()+"部");
+                binding.cinema.setAdapter(adapter);
+            }
+        });
+    }
+
+    private void loadBanner() {
+
+        mViewModel.getBanner().observe(getViewLifecycleOwner(), new Observer<AbnnerModel>() {
+            @Override
+            public void onChanged(AbnnerModel abnnerModel) {
+                //数据
+                binding.banner.setDate(new BannerView.InitAbbnerAdapter() {
+                    @Override
+                    public View getSubView(ViewGroup container, int position) {
+                        ImageView img = new ImageView(getActivity());
+                        //
+                        int postion = position%abnnerModel.getTotal();
+                        Glide.with(getActivity()).load(MainActivity.serverURL+abnnerModel.getRows().get(postion).getAdvImg()).fitCenter().into(img);
+                        if (img.getParent() instanceof ViewGroup) {
+                            ((ViewGroup) img.getParent()).removeView(img);
+                        }
+                        img.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(getActivity(), abnnerModel.getRows().get(postion).getAdvTitle() ,Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        return img;
+                    }
+                },abnnerModel.getTotal());
+            }
+        });
     }
 
     private void initserch() {
@@ -98,5 +149,6 @@ public class Moviesfragment extends Fragment {
     }
     private void initview() {
         binding.hotmvie.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        binding.cinema.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
     }
 }

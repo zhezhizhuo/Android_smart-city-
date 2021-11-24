@@ -149,6 +149,7 @@
             android:id="@+id/introduction"
             android:paddingRight="5dp"
             android:paddingLeft="5dp"
+            android:ellipsize="end"
             android:paddingTop="5dp"
             android:layout_width="match_parent"
             android:lines="2"
@@ -184,15 +185,16 @@
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content"/>
             <Button
+                android:layout_margin="5dp"
                 android:id="@+id/pl"
                android:layout_marginRight="20dp"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/movie_bth"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                android:layout_width="80dp"
+                android:layout_width="70dp"
                 android:text="写评论"
-                android:layout_height="30dp"/>
+                android:layout_height="25dp"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"

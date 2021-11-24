@@ -55,7 +55,7 @@ public void onBindViewHolder(@NonNull @NotNull WaiMaiAdapter.ViewHolder holder, 
     //销售量
     holder.binding.saleQuantity.setText("销售量 "+rowsDTO.getSaleQuantity());
     //均价
-    holder.binding.avgCost.setText(" 均价: "+rowsDTO.getAvgCost()+"💴");
+    holder.binding.avgCost.setText("   "+rowsDTO.getAvgCost()+"💴");
     //配送时间
    // holder.binding.deliveryTime.setText(" "+rowsDTO.getDistance()+"min");
 

@@ -1,5 +1,7 @@
 package com.qgj.juan_05.netwok.service;
 
+import android.widget.Toolbar;
+
 import com.qgj.juan_05.adpater.HomeNewsInfoPlAdapter;
 import com.qgj.juan_05.netwok.model.*;
 
@@ -149,6 +151,9 @@ public interface ServiceDao {
     //生活缴费轮播图
     @GET("/prod-api/api/living/rotation/list")
     Call<AbnnerModel> getLifeBanner();
+    //电影广告
+    @GET("/prod-api/api/movie/rotation/list")
+    Call<AbnnerModel> getMovieBanner();
     //房源
     @GET("/prod-api/api/house/housing/list")
     Call<HouseModel> getHouseAll();
@@ -159,4 +164,11 @@ public interface ServiceDao {
     //根据分类Id查询外卖列表
     @GET("/prod-api/api/takeout/seller/list")
     Call<WaiMai2Model> getWaiMaiInfoAll(@Query("themeId") int id);
+    //影院
+    @GET("/prod-api/api/movie/theatre/list")
+    Call<CinameModel> getCinema(@Query("pageNum") int pageNum,@Query("pageSize") int pageSize);
+    //电影评论
+    @POST("/prod-api/api/movie/film/comment")
+    @Headers( value = "Content-Type:application/json")
+    Call<DataModel> sendMoviePl(@Body SendMoviePlModel moviePlModel,@Header("Authorization") String token);
 }

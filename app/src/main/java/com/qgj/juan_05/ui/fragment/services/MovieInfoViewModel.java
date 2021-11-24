@@ -17,6 +17,9 @@ public class MovieInfoViewModel extends ViewModel {
     //
     MutableLiveData<MoviePlModel> plmode;
 
+
+
+
     public MutableLiveData<MoviesInfoModel> getMode(int id) {
         if (ifmode ==null){
             ifmode = new MutableLiveData<>();
@@ -38,8 +41,8 @@ public class MovieInfoViewModel extends ViewModel {
     public MutableLiveData<MoviePlModel> getModpl(int id) {
         if (plmode ==null){
             plmode = new MutableLiveData<>();
-            loadmodepl(id);
         }
+        loadmodepl(id);
         return plmode;
     }
 
